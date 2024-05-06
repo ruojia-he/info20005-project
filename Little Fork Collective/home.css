@@ -27,7 +27,8 @@ img {
 .navbar {
     background: #C1DE6F;
     max-height: 82px;
-    overflow: visible;
+    min-width: 100vw;
+    position: fixed;
 }
 
 .navbar .container {
@@ -51,15 +52,21 @@ img {
 .navbar .container .main-menu a {
     color: #595E70;
     display: block;
+    border-bottom: solid;
+    border-color: transparent;
 }
 
 .navbar .container .main-menu a:hover{
-    border-bottom: solid;
+    color: #ffffff;
     border-color: #595E70;
 }
 
 .navbar .container .shopping-icon {
-    padding: 20px 20px;
+    position: relative;
+    align-self: flex-start;
+    top: 0px;
+    height: 112px;
+    padding: 0px 20px;
 }
 
 /* Utility Class */
