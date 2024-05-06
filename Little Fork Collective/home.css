@@ -124,7 +124,7 @@ img {
 
 /* homepage1 */
 .homepage1 .container {
-    background: url('/images/home1.png') no-repeat;
+    background: url('/Little Fork Collective/images/home1.png') no-repeat;
     background-position: center top;
     background-size: contain;
     width: 100vw;
@@ -142,7 +142,7 @@ img {
 
 /* homepage2 */
 .homepage2 .container {
-    background: url('/images/home1.png') no-repeat;
+    background: url('/Little Fork Collective/images/home1.png') no-repeat;
     background-position: center top;
     background-size: contain;
     width: auto;
