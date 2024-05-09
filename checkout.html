@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="main-menu">
+                <ul>
+                    <li><a href="menu.html">View Menu</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Partners</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                </ul>
+            </div>
+            <div class="shopping-icon">
+                <a href="home.html"><img src="/images/shopping-icon.png" alt="logo"></a>
+            </div>
+        </div>
+    </nav>
+    <main class="checkout">
+        <h2>Confirm Order</h2>
+        <section class="container">   
+            <div class="steps">
+                <div class="bg">
+                    <p>1. Your Email</p>
+                    <form action="home.html" class="checkout-form">
+                        <input type="text" placeholder="Email" name="q">
+                        <button type="submit">submit</button>
+                    </form>
+                    <label for="">Description</label>
+                </div>
+                <div class="bg">
+                    <p>2. Delivery Methods/Date</p>
+                    <div class="pickup"></div>
+                        <label for="">Date</label>
+                        <form action="home.html" class="checkout-form">
+                            <input type="date">
+                            <button type="submit">submit</button>
+                        </form>
+                    </div>
+                    <div class="shipped">
+                        <label for="">First Name</label>
+                        <form action="home.html" class="checkout-form">
+                            <input type="date">
+                            <button type="submit">submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="bg">
+                    <p>3. Payment & Discounts</p>
+                        <label for="">First Name</label>
+                        <form action="home.html" class="checkout-form">
+                            <input type="date">
+                            <button type="submit">submit</button>
+                        </form>
+                </div>
+                <div class="bg">
+                    <p>4. Review & Purchase</p>
+                </div>
+            </div>
+            <div class="summary">
+                <div class="bg">
+                    <p>Order Summary</p>
+                    <div class="order-item">
+                        <img src="/images/menu1.png" alt="logo">
+                        <p>Name</p>
+                    </div>
+                    <div class="order-item">
+                        <img src="/images/menu1.png" alt="logo">
+                        <p>Name</p>
+                    </div>
+                </div>
+                <div class="bg" id="purchase">
+                    <div class="price">
+                        <p>Purchase</p>
+                    </div>
+                    <button>
+                        Button
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
