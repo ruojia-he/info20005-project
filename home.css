@@ -135,7 +135,7 @@ img {
 }
 
 .home-page {
-    background: url('/Little Fork Collective/images/home1.png') no-repeat;
+    background: url('/images/home1.png') no-repeat;
     background-position: center top;
     background-size: cover;
 }
