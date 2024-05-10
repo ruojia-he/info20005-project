@@ -106,6 +106,7 @@ input {
 
 /* Navbar */
 .navbar {
+    z-index: 1;
     background-color: #C1DE6F;
     min-width: 100vw;
     transition: 0.5s;
