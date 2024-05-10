@@ -76,6 +76,15 @@ img {
     text-align: center;
 }
 
+input {
+    width: 100%;
+    font-size: 18px;
+    color: #595E70;
+    padding: 2%;
+    outline: none;
+    border: 0;
+}
+
 /* Utility Class */
 .container {
     margin: 0px auto;
@@ -211,14 +220,7 @@ img {
     border-radius: 20px;
 }
 
-.menu-page .container .search-bar input {
-    width: 100%;
-    font-size: 18px;
-    color:#595E70; 
-    padding: 2%;
-    outline: none;
-    border: 0;
-}
+
 
 .menu-page .container .search-bar button {
     width: 2em;
@@ -259,8 +261,6 @@ img {
 }
 
 .details .container .item-detail #ingredients .bg {
-    display: block;
-    background-color: #C1DE6F;
     width: 80%;
     margin: auto;
     border-radius: 10px;
@@ -293,7 +293,6 @@ img {
     display: flex;
     flex-direction: column;
 }
-
 
 .checkout .container .summary .bg .order-item{
     display: flex;
