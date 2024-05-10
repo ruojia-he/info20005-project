@@ -272,8 +272,11 @@ img {
     height: 413px;
 }
 
-.details .container .item-detail #ingredients .grid-two-two .bg {
+.details .container .item-detail #ingredients .bg {
     background-color: #C1DE6F;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     min-width: 174px;
     min-height: 36px;
 }
