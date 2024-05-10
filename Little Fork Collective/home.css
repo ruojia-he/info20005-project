@@ -162,7 +162,7 @@ img {
 /* homepage 1 */
 .page-one {
     margin-bottom: 50px;
-    background: url('/Little Fork Collective/images/home1.png') no-repeat;
+    background: url('/images/home1.png') no-repeat;
     background-position: center top;
     background-size: cover;
 }
@@ -273,7 +273,6 @@ img {
 }
 
 .details .container .item-detail #ingredients .grid-two-two .bg {
-    position: relative;
     background-color: #C1DE6F;
     min-width: 174px;
     min-height: 36px;
