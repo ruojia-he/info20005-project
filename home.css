@@ -165,7 +165,7 @@ input {
 
 .navbar .container .shopping-icon:hover {
     transform: translateY(10px);
-}   
+}
 
 /* homepage 1 */
 .page-one {
@@ -220,8 +220,6 @@ input {
     border-radius: 20px;
 }
 
-
-
 .menu-page .container .search-bar button {
     width: 2em;
     cursor: pointer;
@@ -247,6 +245,18 @@ input {
     padding: 50px;
 }
 
+.details .container{
+    margin: 0px auto;
+    padding: 0px 10px;
+    max-width: 1200px;
+}
+
+.details .container .item-detail {
+    margin: 0px auto;
+    padding: 0px 10px;
+    max-width: 1200px;
+}
+
 .details .container .item-detail {
     padding-top: 1.25rem;
     display: grid;
@@ -255,7 +265,16 @@ input {
     grid-template-columns: 65% 35%;
 }
 
-.details .container .item-detail #description img{
+.details .container .item-detail #description {
+    max-width: 80%;
+}
+
+.details .container .item-detail #description > p{
+    margin: 5%;
+    max-width: 96%;
+}
+
+.details .container .item-detail #description > img{
     width: 612px;
     height: 413px;
 }
@@ -267,9 +286,15 @@ input {
     transform: translateY(-50%);
 }
 
-.details .container .item-detail #ingredients img {
-    width: 206px;
-    height: 163px;
+.details .container .item-detail .centered-x h1 {
+    font-size: 60px;
+    margin-bottom: 2%;
+}
+
+.details .container .item-detail .centered-x h2{
+    font-family: 'Lancelot';
+    color: #595E70;
+    font-size: 50px;
 }
 
 .details .container .grid-two-two .centered-x img{
