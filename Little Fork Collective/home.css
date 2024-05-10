@@ -305,9 +305,6 @@ img {
     flex-direction: column;
 }
 
-.checkout .container .summary{
-
-}
 
 .checkout .container .summary .bg .order-item{
     display: flex;
