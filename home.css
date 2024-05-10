@@ -23,6 +23,8 @@ h2 {
     background-color: white;
     border-radius: 20px;
     padding: 20px;
+    margin: 20px;
+    text-align: center;
 }
 
 p {
@@ -59,9 +61,22 @@ img {
     color: #C1DE6F;
 }
 
+.centered-x {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-two-two {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3%;
+}
+
 /* Utility Class */
 .container {
-    max-width: 100vw;
     margin: 0px auto;
     padding: 0px 10px;
     max-width: 1200px;
@@ -221,20 +236,14 @@ img {
     padding-left: 2px;
 }
 
-.menu-page .container .items {
-    display: grid;
-    justify-content: start;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3%;
-}
-
-.menu-page .container .items h2 {
+.menu-page .container .grid-two-two h2 {
     margin: 0px 10px;
     margin-top: 8px;
+    font-size: 20px;
     color: #92C352;
 }
 
-.menu-page .container .items .btn {
+.menu-page .container .grid-two-two .btn {
     border-radius: 5px;
     padding: 2px 8px;
     color: #747474;
@@ -245,9 +254,40 @@ img {
 }
 
 /* details */
+.details {
+    background-color: #e2e2e2;
+    padding: 50px;
+}
 
+.details .container .item-detail {
+    padding-top: 1.25rem;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 65% 35%;
+}
 
+.details .container .item-detail #description img{
+    width: 612px;
+    height: 413px;
+}
 
+.details .container .item-detail #ingredients .grid-two-two .bg {
+    position: relative;
+    background-color: #C1DE6F;
+    min-width: 174px;
+    min-height: 36px;
+}
+
+.details .container .item-detail #ingredients img {
+    width: 206px;
+    height: 163px;
+}
+
+.details .container .grid-two-two .centered-x img{
+    width: 514px;
+    height: 311px;
+}
 
 /* checkout */
 .checkout {
@@ -258,29 +298,26 @@ img {
 .checkout .container {
     max-width: 800px;
     display: flex;
+    justify-content: center;
 }
 
 .checkout .container .steps{
     display: flex;
     flex-direction: column;
-    justify-content: start;
 }
 
 .checkout .container .summary{
 
 }
 
-.checkout .container .order {
-
-}
-
-.checkout .container .order .order-item{
+.checkout .container .summary .bg .order-item{
     display: flex;
+    justify-content: space-between;
 }
 
-.checkout .container .order .order-item img{
-    max-width: 30%;
-    max-height: 30%;
+.checkout .container .summary .bg .order-item img{
+    max-width: 40%;
+    max-height: 40%;
 }
 
 .checkout .container #purchase {

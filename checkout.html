@@ -31,41 +31,37 @@
         <h2>Confirm Order</h2>
         <section class="container">   
             <div class="steps">
-                <div class="bg">
+                <div class="bg" id="step-one">
                     <p>1. Your Email</p>
                     <form action="home.html" class="checkout-form">
                         <input type="text" placeholder="Email" name="q">
-                        <button type="submit">submit</button>
                     </form>
                     <label for="">Description</label>
                 </div>
-                <div class="bg">
+                <div class="bg" id="step-three">
+                    <p>3. Payment & Discounts</p>
+                    <label for="">First Name</label>
+                    <form action="home.html" class="checkout-form">
+                        <input type="date">
+                    </form>
+                </div>
+                <div class="bg" id="step-four">
+                    <p>4. Review & Purchase</p>
+                </div>
+                <div class="bg" id="step-two">
                     <p>2. Delivery Methods/Date</p>
-                    <div class="pickup"></div>
+                    <span class="pickup"></span>
                         <label for="">Date</label>
                         <form action="home.html" class="checkout-form">
                             <input type="date">
-                            <button type="submit">submit</button>
                         </form>
                     </div>
-                    <div class="shipped">
+                    <span class="shipped">
                         <label for="">First Name</label>
                         <form action="home.html" class="checkout-form">
                             <input type="date">
-                            <button type="submit">submit</button>
                         </form>
-                    </div>
-                </div>
-                <div class="bg">
-                    <p>3. Payment & Discounts</p>
-                        <label for="">First Name</label>
-                        <form action="home.html" class="checkout-form">
-                            <input type="date">
-                            <button type="submit">submit</button>
-                        </form>
-                </div>
-                <div class="bg">
-                    <p>4. Review & Purchase</p>
+                    </span>
                 </div>
             </div>
             <div class="summary">
