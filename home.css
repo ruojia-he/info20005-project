@@ -246,9 +246,9 @@ input {
 }
 
 .details .container{
-    margin: 0px auto;
-    padding: 0px 10px;
-    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .details .container .item-detail {
