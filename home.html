@@ -13,10 +13,10 @@
     rel="stylesheet">
 
     <link rel="stylesheet" href="home.css">
-    
-
 </head>
 <body>
+    <script src="/home.js"></script>
+
     <nav class="navbar">
         <div class="container">
             <div class="logo">
@@ -32,8 +32,8 @@
                     <li><a href="#">Customer Service</a></li>
                 </ul>
             </div>
-            <div class="shopping-icon">
-                <a href="checkout.html"><img src="/images/shopping-icon.png" alt="logo"></a>
+            <div class="cart-icon" onclick="overlayOn()">
+                <img src="/images/shopping-icon.png" alt="logo">
             </div>
         </div>
     </nav>
@@ -49,21 +49,43 @@
         </section>
         <section class="page-two">
             <div class="container">
-                <h1 class="grey-txt">Home Of</h1>
-                <h1 class="grey-txt">Delicious Boxes</h1>
+                <h1>Grazing,</h1>
+                <h1>Catering,</h1>
                 <h1 class="green-txt">Family Meals</h1>
                 <a href="menu.html"><button type="button" class="btn">Get Started →</button></a>
             </div>
         </section>
 
+
+
+
+
+
+        <div class="sidebar" id="sidevar">
+            <img class="sidebar-close" src="/images/close.png"></img>
+            <h3 class="centered-x">My Cart</h3>
+            <div class="bg">
+                <div class="order-item">
+                    <img src="/images/menu1.png" alt="logo">
+                    <p>Name</p>
+                </div>
+            </div>
+            <div class="bg">
+                <div class="order-item">
+                    <img src="/images/menu1.png" alt="logo">
+                    <p>Name</p>
+                </div>
+            </div>
+            <div class="total-purchase">
+                <div class="price">
+                    <p>Purchase</p>
+                </div>
+                <button class="btn"><a href="checkout.html">Button</a></button>
+            </div>
+        </div>
+
     </main>
 
-
-
-
-    
-
-
-    <script></script>
+    <div id="overlay" onclick="overlayOff()"></div>
 </body>
 </html>

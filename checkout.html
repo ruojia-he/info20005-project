@@ -37,7 +37,7 @@
     </nav>
     
     <main class="checkout">
-        <h2>Confirm Order</h2>
+        <h2 class="title">Confirm Order</h2>
         <section class="container">   
             <div class="steps">
                 <div class="bg" id="step-one">
@@ -46,6 +46,21 @@
                         <input type="text" placeholder="Email" name="q">
                     </form>
                     <label for="">Description</label>
+                </div>
+                <div class="bg" id="step-two">
+                    <p>2. Delivery Methods/Date</p>
+                    <span class="pickup">
+                        <label for="">Date</label>
+                        <form action="home.html" class="checkout-form">
+                            <input type="date">
+                        </form>
+                    </span>
+                    <span class="shipped">
+                        <label for="">First Name</label>
+                        <form action="home.html" class="checkout-form">
+                            <input type="date">
+                        </form>
+                    </span>
                 </div>
                 <div class="bg" id="step-three">
                     <p>3. Payment & Discounts</p>
@@ -57,22 +72,8 @@
                 <div class="bg" id="step-four">
                     <p>4. Review & Purchase</p>
                 </div>
-                <div class="bg" id="step-two">
-                    <p>2. Delivery Methods/Date</p>
-                    <span class="pickup"></span>
-                        <label for="">Date</label>
-                        <form action="home.html" class="checkout-form">
-                            <input type="date">
-                        </form>
-                    </div>
-                    <span class="shipped">
-                        <label for="">First Name</label>
-                        <form action="home.html" class="checkout-form">
-                            <input type="date">
-                        </form>
-                    </span>
-                </div>
             </div>
+
             <div class="summary">
                 <div class="bg">
                     <p>Order Summary</p>
@@ -85,13 +86,11 @@
                         <p>Name</p>
                     </div>
                 </div>
-                <div class="bg" id="purchase">
+                <div class="total-purchase">
                     <div class="price">
                         <p>Purchase</p>
                     </div>
-                    <button>
-                        Button
-                    </button>
+                    <button class="btn">Button</button>
                 </div>
             </div>
         </section>

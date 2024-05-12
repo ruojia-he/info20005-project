@@ -18,6 +18,13 @@ h2 {
     font-weight: normal;
 }
 
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    padding: 15px;
+}
+
 p {
     font-family: "Lato", "Poppins", sans-serif;
     color: #595E70;
@@ -46,6 +53,17 @@ img {
     max-width: 100%;
 }
 
+input {
+    width: 100%;
+    font-size: 18px;
+    color: #595E70;
+    padding: 2%;
+    outline: none;
+    border: 0;
+}
+
+
+/* design-specific global setting*/
 .grey-txt {
     color: #595E70;
 }
@@ -71,19 +89,22 @@ img {
 .bg {
     background-color: white;
     border-radius: 20px;
-    padding: 5%;
-    margin: 20px;
+    padding: 3%;
+    margin: 3%;
     text-align: center;
 }
 
-input {
-    width: 100%;
-    font-size: 18px;
-    color: #595E70;
-    padding: 2%;
-    outline: none;
-    border: 0;
+.total-purchase {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5%;
+    margin: 3%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
+
+
 
 /* Utility Class */
 .container {
@@ -192,18 +213,36 @@ input {
     background-color: #FFE079;
 }
 
+.page-two {
+    margin-bottom: 50px;
+    background: url('/images/home1.png') no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+.page-two .container {
+    padding-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.page-two .container button {
+    font-size: 36px;
+    padding: 25px 80px;
+    margin-top: 60px;
+    margin-bottom: 160px;
+    color: #895F52;
+    background-color: #FFE079;
+}
+
+
+
 
 /* Menu Page */
 .menu-page {
     background-color: #F9F6F5;
     background-size: cover;
-}
-
-.menu-page .title{
-    display: flex;
-    justify-content: center;
-    font-size: 50px;
-    padding: 15px;
 }
 
 .menu-page .container {
@@ -240,22 +279,19 @@ input {
     font-size: 12px;
 }
 
+.menu-page .container .grid-two-two .bg {
+    padding: 5%;
+}
+
+
 /* details */
 .details {
     background-color: #e2e2e2;
-    padding: 50px;
 }
 
 .details .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.details .container .item-detail {
-    margin: 0px auto;
-    padding: 0px 10px;
-    max-width: 1200px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .details .container .item-detail {
@@ -263,21 +299,16 @@ input {
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 60% 40%;
 }
 
 .details .container .item-detail #description {
-    max-width: 80%;
+    max-width: 95%;
 }
 
-.details .container .item-detail #description > p{
-    margin: 5%;
-    max-width: 96%;
-}
 
 .details .container .item-detail #description > img{
-    width: 612px;
-    height: 413px;
+    width: 100%;
 }
 
 .details .container .item-detail #ingredients .bg {
@@ -310,27 +341,86 @@ input {
 }
 
 .checkout .container {
-    max-width: 800px;
+    max-width: 1100px;
     display: flex;
     justify-content: center;
 }
 
 .checkout .container .steps{
-    display: flex;
-    flex-direction: column;
+    width: 40%;
 }
 
-.checkout .container .summary .bg .order-item{
+.checkout .container .steps .bg {
+    text-align: start;
+}
+
+.checkout .container .summary {
+    width: 40%;
+}
+
+
+
+/*global*/
+.order-item{
+    background-color: white;
+    border-radius: 20px;
     display: flex;
     justify-content: space-between;
+    padding: 2% 1%;
 }
 
-.checkout .container .summary .bg .order-item img{
+.order-item img{
     max-width: 40%;
     max-height: 40%;
 }
 
-.checkout .container #purchase {
-    display: flex;
-    justify-content: space-between;
+
+
+
+
+
+
+
+
+
+/* sidebar cart */
+.sidebar {
+    z-index: 3;
+    background-color: #F9F6F5;
+    width: 30vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    transition: right 0.3s ease-in-out;
+    padding: 1%;
+}
+
+.sidebar .open {
+    right: 0;
+}
+
+.sidebar .sidebar-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.sidebar .total-purchase {
+    position: absolute;
+    bottom: 0px;
+}
+
+#overlay {
+    z-index: 2;
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
 }
