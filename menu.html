@@ -12,8 +12,8 @@
     href="https://fonts.googleapis.com/css2?family=Lancelot&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
 
-
-
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="home.css">
 </head>
 
@@ -33,8 +33,8 @@
                     <li><a href="#">Customer Service</a></li>
                 </ul>
             </div>
-            <div class="shopping-icon">
-                <a href="checkout.html"><img src="/images/shopping-icon.png" alt="logo"></a>
+            <div class="cart-icon" onclick="overlayOn()">
+                <img src="/images/shopping-icon.png">
             </div>
         </div>
     </nav>
@@ -50,30 +50,126 @@
                 <div class="bg">
                     <a href="details.html"><img src="/images/menu1.png"></a>
                     <h2>The Baby Graze</h2>
-                    <a href="menu.html"><button type="button" class="btn">FAST</button></a>
-                    <a href="menu.html"><button type="button" class="btn">EASY</button></a>
-                    <a href="menu.html"><button type="button" class="btn">GF</button></a>
-                </div>
-
-
-
-                <div class="bg">
-                    <img src="/images/menu1.png">
-                    <h2>The Baby Graze</h2>
-                    <a href="menu.html"><button type="button" class="btn">FAST</button></a>
-                    <a href="menu.html"><button type="button" class="btn">EASY</button></a>
-                    <a href="menu.html"><button type="button" class="btn">GF</button></a>
+                    <a href="menu.html"><button type="button" class="btn-tag">FAST</button></a>
+                    <a href="menu.html"><button type="button" class="btn-tag">EASY</button></a>
+                    <a href="menu.html"><button type="button" class="btn-tag">GF</button></a>
                 </div>
                 <div class="bg">
                     <img src="/images/menu1.png">
                     <h2>The Baby Graze</h2>
-                    <a href="menu.html"><button type="button" class="btn">FAST</button></a>
-                    <a href="menu.html"><button type="button" class="btn">EASY</button></a>
-                    <a href="menu.html"><button type="button" class="btn">GF</button></a>
+                    <a href="menu.html"><button type="button" class="btn-tag">FAST</button></a>
+                    <a href="menu.html"><button type="button" class="btn-tag">EASY</button></a>
+                    <a href="menu.html"><button type="button" class="btn-tag">GF</button></a>
+                </div>
+                <div class="bg">
+                    <img src="/images/menu1.png">
+                    <h2>The Baby Graze</h2>
+                    <a href="menu.html"><button type="button" class="btn-tag">FAST</button></a>
+                    <a href="menu.html"><button type="button" class="btn-tag">EASY</button></a>
+                    <a href="menu.html"><button type="button" class="btn-tag">GF</button></a>
+                </div>
+                <div class="bg">
+                    <img src="/images/menu1.png">
+                    <h2>The Baby Graze</h2>
+                    <a href="menu.html"><button type="button" class="btn-tag">FAST</button></a>
+                    <a href="menu.html"><button type="button" class="btn-tag">EASY</button></a>
+                    <a href="menu.html"><button type="button" class="btn-tag">GF</button></a>
+                </div>
+                <div class="bg">
+                    <img src="/images/menu1.png">
+                    <h2>The Baby Graze</h2>
+                    <a href="menu.html"><button type="button" class="btn-tag">FAST</button></a>
+                    <a href="menu.html"><button type="button" class="btn-tag">EASY</button></a>
+                    <a href="menu.html"><button type="button" class="btn-tag">GF</button></a>
+                </div>
+                <div class="bg">
+                    <img src="/images/menu1.png">
+                    <h2>The Baby Graze</h2>
+                    <a href="menu.html"><button type="button" class="btn-tag">FAST</button></a>
+                    <a href="menu.html"><button type="button" class="btn-tag">EASY</button></a>
+                    <a href="menu.html"><button type="button" class="btn-tag">GF</button></a>
+                </div>
+                <div class="bg">
+                    <img src="/images/menu1.png">
+                    <h2>The Baby Graze</h2>
+                    <a href="menu.html"><button type="button" class="btn-tag">FAST</button></a>
+                    <a href="menu.html"><button type="button" class="btn-tag">EASY</button></a>
+                    <a href="menu.html"><button type="button" class="btn-tag">GF</button></a>
                 </div>
             </div>
         </section>
-    </main>
-</body>
 
+
+
+        <!-- footer -->>
+        <footer class="footer">
+            <div class="footer-social-media">
+                <img src="/images/contacts.png">
+            </div>
+            <div class="container-footer">
+                <div class="footer-links">
+                    <a href="#">Beau + Frank - Snacks and Treats</a>
+                    <a href="#">Our Partners</a>
+                    <a href="#">Food Shelf Life</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Customer Service</a>
+                </div>
+                <div class="footer-contacts">
+                    <p>+61 438440474</p>
+                    <p>amanda@littleforkcollective.kitchen</p>
+                    <p>Little Fork Collective Spotswood, VIC Australia</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- side bar -->
+        <div class="sidebar" id="sidebar" style="display: flex; flex-direction:column;">
+            <img class="sidebar-close" src="/images/close.png"></img>
+            <h3 class="centered-x">My Cart</h3>
+            <div class="sidebar-contents">
+                <div class="bg">
+                    <div class="order-item">
+                        <img src="/images/menu1.png" alt="logo">
+                        <p>Name</p>
+                        <img class="close" src="/images/close.png"></img>
+                    </div>
+                </div>
+                <div class="bg">
+                    <div class="order-item">
+                        <div class="item-description">
+                            <img src="/images/menu1.png" alt="logo">
+                            <p>Name</p>
+                        </div>
+                        <div class="">
+                            <img class="close" src="/images/close.png"></img>
+                            <p>$20</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="total-purchase" onclick="btnActive()">
+                <div class="price">
+                    <div class="price-row">
+                        <p>Subtotal</p>
+                        <p>$200</p>
+                    </div>
+                    <div class="price-row">
+                        <p>Shipping</p>
+                        <p>$0</p>
+                    </div>
+                    <div class="price-row">
+                        <div class="price-detail">
+                            <p class="price-cnt">5 Items,</p>
+                            <p class="price-total">Total</p>
+                        </div>
+                        <p class="price-final">$200</p>
+                    </div>
+                </div>
+                <button class="btn" id="total-purchase-btn"><a href="checkout.html">Button</a></button>
+            </div>
+        </div>
+    </main>
+    <div id="overlay" onclick="overlayOff()"></div>
+</body>
+<script src="/home.js"></script>
 </html>
