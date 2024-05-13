@@ -38,39 +38,55 @@
     </nav>
     
     <main class="checkout">
-        <h2 class="title">Confirm Order</h2>
+        <h2>Confirm Order</h2>
         <section class="container">   
             <div class="steps">
-                <div class="bg" id="step-one">
+                <div class="bg">
                     <p>1. Your Email</p>
-                    <form action="home.html" class="checkout-form">
+                    <span class="step-one-show" id="step-one-show">
                         <input type="text" placeholder="Email" name="q">
-                    </form>
-                    <label for="">Description</label>
+                        <label for="" class="centered-x" style="font-size: 11px;">You'll receive receipts and notifications at this email address.</label>
+                        <button class="btn" onclick="steps()">Continue</button>
+                    </span>
+                    <span class="step-one-done" id="step-one-done" style="display: none;">
+                        <p>test@test.com</p>
+                    </span>
                 </div>
-                <div class="bg" id="step-two">
+
+                <div class="bg">
                     <p>2. Delivery Methods/Date</p>
-                    <span class="pickup">
-                        <label for="">Date</label>
-                        <form action="home.html" class="checkout-form">
+                    <span class="step-two-show" id="step-two-show" style="display: none">
+                        <button class="btn" onclick="deliveryMethod()">picked</button>
+                        <button class="btn" onclick="deliveryMethod()">shipped</button>
+                        <span class="picked" id="picked">
+                            <label for="">Date</label>
                             <input type="date">
-                        </form>
+                            <button class="btn" onclick="steps()">Continue</button>
+                        </span>
+                        <span class="shipped" id="picked" style="display: none">
+                            <label for="">Date</label>
+                            <input type="date">
+                            <button class="btn" onclick="steps()">Continue</button>
+                        </span>
                     </span>
-                    <span class="shipped">
-                        <label for="">First Name</label>
-                        <form action="home.html" class="checkout-form">
-                            <input type="date">
-                        </form>
+                    <span class="step-two-done" id="step-two-done" style="display: none">
+                        <p>Address</p>
                     </span>
                 </div>
-                <div class="bg" id="step-three">
+
+                <div class="bg">
                     <p>3. Payment & Discounts</p>
-                    <label for="">First Name</label>
-                    <form action="home.html" class="checkout-form">
+                    <span class="step-three-show" id="step-three-show" style="display: none">
+                        <label for="">Date</label>
                         <input type="date">
-                    </form>
+                        <button class="btn" onclick="steps()">Continue</button>
+                    </span>
+                    <span class="step-three-done" id="step-three-done" style="display: none">
+                        <p>card number<p>
+                    </span>
                 </div>
-                <div class="bg" id="step-four">
+
+                <div class="bg">
                     <p>4. Review & Purchase</p>
                 </div>
             </div>
@@ -89,9 +105,23 @@
                 </div>
                 <div class="total-purchase">
                     <div class="price">
-                        <p>Purchase</p>
+                        <div class="price-row">
+                            <p>Subtotal</p>
+                            <p>$200</p>
+                        </div>
+                        <div class="price-row">
+                            <p>Shipping</p>
+                            <p>$0</p>
+                        </div>
+                        <div class="price-row">
+                            <div class="price-detail">
+                                <p class="price-cnt">5 Items,</p>
+                                <p class="price-total">Total</p>
+                            </div>
+                            <p class="price-final">$200</p>
+                        </div>
                     </div>
-                    <button class="btn">Button</button>
+                    <button class="btn" id="total-purchase-btn"><a href="#">Button</a></button>
                 </div>
             </div>
         </section>

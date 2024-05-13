@@ -5,32 +5,6 @@
     padding: 0;
 }
 
-h1 {
-    font-family: "Lancelot", sans-serif;
-    color: #595E70;
-    font-size: 100px;
-    font-weight: 20;
-}
-
-h2 {
-    font-family: "Lato", "Poppins", sans-serif;
-    color: #C1DE6F;
-    font-weight: normal;
-}
-
-.title {
-    display: flex;
-    justify-content: center;
-    font-size: 50px;
-    padding: 15px;
-}
-
-p {
-    font-family: "Lato", "Poppins", sans-serif;
-    color: #595E70;
-    font-weight: normal;
-}
-
 body {
     font-family: "Lato", "Poppins", sans-serif;
     color: #595E70;
@@ -55,7 +29,7 @@ img {
 
 input {
     width: 100%;
-    font-size: 18px;
+    font-size: 13px;
     color: #595E70;
     padding: 2%;
     outline: none;
@@ -71,6 +45,41 @@ input {
     color: #C1DE6F;
 }
 
+/* Homepage Title */
+h1 {
+    font-family: "Lancelot", sans-serif;
+    color: #595E70;
+    font-size: 100px;
+    font-weight: 20;
+}
+
+/* Subpage Title */
+h2 {
+    font-family: "Lancelot", sans-serif;
+    font-size: 50px;
+    color: #595E70;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+
+}
+
+/* Menu Item Title */
+h3 {
+    font-family: "Lato", "Poppins", sans-serif;   
+    font-size: 26px;
+    color: #92C352;
+    font-weight: thin;
+}
+
+/* Description etc */
+p {
+    font-family: "Lato", "Poppins", sans-serif;
+    color: #595E70;
+    font-weight: normal;
+}
 /* Utility */
 .container {
     margin: 0px auto;

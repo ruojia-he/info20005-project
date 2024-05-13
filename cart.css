@@ -49,7 +49,24 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* checkout/purchase bar settings */
+/* order item on sidebar settings */ 
+.order-item {
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 1%;
+}
+
+.order-item img {
+    max-width: 40%;
+    max-height: 40%;
+}
+
+
+
+
+/* checkout, purchase bar settings */
 .total-purchase {
     background-color: #C1DE6F;
     border-radius: 20px;

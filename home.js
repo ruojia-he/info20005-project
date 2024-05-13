@@ -17,9 +17,9 @@ const closeButton = document.querySelector('.sidebar-close');
 closeButton.addEventListener('click', () => {overlayOff()});
 
 
-/* total-purchase */
+/* total-purchase 
 const totalPurchaseBtn = document.getElementById("total-purchase-btn");
 
 function btnActive() {
     totalPurchaseBtn.classList.add('active');
-}
+} */
