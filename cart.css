@@ -1,0 +1,147 @@
+/* sidebar cart */
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    background-color: #F9F6F5;
+    width: 35vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -35vw;
+    /* right: -35vw; */
+    transition: right 0.3s ease-in-out;
+}
+
+#sidebar.open {
+    right: 0;
+}
+
+#sidebar h3 {
+    padding: 5%;
+}
+
+#sidebar .sidebar-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.on {
+    flex-grow: 1;
+}
+
+.off {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* overlay */
+#overlay {
+    z-index: 2;
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* order item on sidebar settings */ 
+.order-item {
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 1%;
+}
+
+.order-item img {
+    max-width: 40%;
+    max-height: 40%;
+}
+
+/* checkout, purchase bar settings */
+.total-purchase {
+    background-color: #C1DE6F;
+    border-radius: 20px;
+    padding: 5%;
+    margin: 3%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-purchase .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 48%;
+}
+
+.total-purchase .price .price-row {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.total-purchase .price .price-row .price-detail {
+    display: flex;
+}
+
+.total-purchase .price .price-row .price-cnt {
+    font-size: 20px;
+    color: #838A92;
+    font-weight: bolder;
+}
+
+.total-purchase .price .price-row .price-total {
+    font-size: 20px;
+    color: #595E70;
+    font-weight: bolder;
+}
+
+.total-purchase .price .price-row .price-final {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+/* sidebar setting */
+.sidebar .total-purchase {
+    background-size: cover;
+    padding: 5%;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.cart-icon.c-0>.c-1,
+.cart-icon.c-0>.c-2,
+.cart-icon.c-1>.c-0,
+.cart-icon.c-1>.c-2,
+.cart-icon.c-2>.c-0,
+.cart-icon.c-2>.c-1,
+.add.addOn-0 .addOn-1,
+.add.addOn-0 .addOn-2,
+.add.addOn-1 .addOn-0,
+.add.addOn-1 .addOn-2,
+.add.addOn-2 .addOn-0,
+.add.addOn-2 .addOn-1 {
+    display: none;
+}
+
+.sidebar.item-0 .on,
+.sidebar.item-0 .total-purchase,
+.sidebar.item-1 .off,
+.sidebar.item-1 .on .item-2,
+.sidebar.item-2 .off,
+.sidebar.item-2 .on .item-1 {
+    display: none;
+}

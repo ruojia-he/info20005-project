@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Lancelot&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+    
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="main-menu">
+                <ul>
+                    <li><a href="menu.html">View Menu</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Partners</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                </ul>
+            </div>
+            <div class="cart-icon c-0" id="cart-icon" onclick="overlayOn()">
+                <div class="c-0">
+                    <img src="/images/shopping-icon.png">
+                </div>
+                <div class="c-1">
+                    <img src="/images/shopping-icon-one.png">
+                </div>
+                <div class="c-2">
+                    <img src="/images/shopping-icon-two.png">
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="details">
+        <section class="container">
+            <div class="item-detail">
+                <div class="item-description">
+                    <div class="item-title">
+                        <a href="menu.html"><img src="/images/back.png"></a>
+                        <h1>The Baby Graze</h1>
+                    </div>
+                    <img src="/images/menu1.png">
+                    <div >
+                        <div style="display: flex;">
+                            <div class="btn-tag">
+                                Fast
+                            </div>
+                            <div class="btn-tag">
+                                Fast
+                            </div>
+                            <div class="btn-tag">
+                                Fast
+                            </div>
+                        </div>
+                        <p>$20</p>
+                    </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt nobis porro odit exercitationem maxime libero 
+                        architecto atque voluptas, ab asperiores vitae vel eveniet veniam omnis optio deserunt illum dolorem sed.</p>
+                </div>
+                <div class="centered-x">
+                    <h2>What</h2>
+                    <div class="grid-two-two" id="ingredients">
+                        <div>
+                            <img src="/images/fresh-berries.png">
+                            <div class="bg">Fresh Berries</div>
+                        </div>
+                        <div>
+                            <img src="/images/cheddar.png">
+                            <div class="bg">Aged Cheddar</div>
+                        </div>
+                        <div>
+                            <img src="/images/salami.png">
+                            <div class="bg">Salami</div>
+                        </div>
+                        <div>
+                            <img src="/images/apricots.png">
+                            <div class="bg">Apricots</div>
+                        </div>
+                    </div>
+                    <div class="selections">
+                        <div class="dropdown">
+                            <p>dropdown,</p>
+                        </div>
+                        <div class="add addOn-0" id="add">
+                            <div class="addOn-0">
+                                <button class="btn" onclick="addToCart(1)">add to cart</button>
+                            </div>
+                            <div class="addOn-1">
+                                <div class="bg">
+                                    <button class="btn" onclick="addToCart(-1)">-</button>
+                                    <p>1</p>
+                                    <button class="btn" onclick="addToCart(1)">+</button>
+                                </div>
+                            </div>
+                            <div class="addOn-2">
+                                <div class="bg">
+                                    <button class="btn" onclick="addToCart(-1)">-</button>
+                                    <p>2</p>
+                                    <button class="btn" onclick="addToCart(1)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <h1 class="centered-x">Let's Cook</h1>
+            <div class="grid-two-two">
+                <div class="centered-x">
+                    <img src="/images/menu1.png">
+                    <p>Step 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus ullam, atque ipsum reiciendis sapiente
+                    laborum quis quasi quaerat. Quo inventore in fugiat recusandae non similique iste labore mollitia corrupti!</p>
+                </div>
+                <div class="centered-x">
+                    <img src="/images/menu1.png">
+                    <p>Step 2: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus ullam, atque ipsum reiciendis sapiente
+                    laborum quis quasi quaerat. Quo inventore in fugiat recusandae non similique iste labore mollitia corrupti!</p>
+                </div>
+                <div class="centered-x">
+                    <img src="/images/menu1.png">
+                    <p>Step 3: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus ullam, atque ipsum reiciendis
+                    sapiente laborum quis quasi quaerat. Quo inventore in fugiat recusandae non similique iste labore mollitia corrupti!</p>
+                </div>
+                <div class="centered-x">
+                    <img src="/images/menu1.png">
+                    <p>Step 4: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus ullam, atque ipsum reiciendis
+                    sapiente laborum quis quasi quaerat. Quo inventore in fugiat recusandae non similique iste labore mollitia corrupti!</p>
+                </div>
+            </div>
+        </section>
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-social-media">
+                <img src="/images/contacts.png">
+            </div>
+            <div class="container-footer">
+                <div class="footer-links">
+                    <a href="#">Beau + Frank - Snacks and Treats</a>
+                    <a href="#">Our Partners</a>
+                    <a href="#">Food Shelf Life</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Customer Service</a>
+                </div>
+                <div class="footer-contacts">
+                    <p>+61 438440474</p>
+                    <p>amanda@littleforkcollective.kitchen</p>
+                    <p>Little Fork Collective Spotswood, VIC Australia</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- side bar -->
+        <div class="sidebar item-0" id="sidebar" style="display: flex; flex-direction:column;">
+            <img class="sidebar-close" src="/images/close.png">
+            <h3 class="centered-x">My Cart</h3>
+            <div class="off">
+                <p>Your Cart is Empty</p>
+            </div>
+            <div class="on">
+                <div class="sidebar-contents">
+                    <div class="bg">
+                        <div class="order-item">
+                            <div class="item-description">
+                                <img src="/images/menu1.png" alt="logo">
+                                <div>
+                                    <div class="item-1">
+                                        <p>Name One Item</p>
+                                        <button class="btn" onclick="addToCart(-1)">-</button>
+                                        <p>2</p>
+                                        <button class="btn" onclick="addToCart(1)">+</button>
+                                    </div>
+                                    <div class="item-2">
+                                        <p>Name Two Items</p>
+                                        <button class="btn" onclick="addToCart(-1)">-</button>
+                                        <p>2</p>
+                                        <button class="btn" onclick="addToCart(1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div onclick="addToCart(-99)" class="" style="cursor:pointer">
+                                <img class="close" src="/images/close.png">
+                                <p>$20</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="total-purchase">
+                <div class="price">
+                    <div class="price-row">
+                        <p>Subtotal</p>
+                        <p>$200</p>
+                    </div>
+                    <div class="price-row">
+                        <p>Shipping</p>
+                        <p>$0</p>
+                    </div>
+                    <div class="price-row">
+                        <div class="price-detail">
+                            <p class="price-cnt">5 Items,</p>
+                            <p class="price-total">Total</p>
+                        </div>
+                        <p class="price-final">$200</p>
+                    </div>
+                </div>
+                <button class="btn active" id="redirectButton">Button</button>
+            </div>
+        </div>
+    </main>
+    <div id="overlay" onclick="overlayOff()"></div>
+</body>
+<script src="/home.js"></script>
+</html>
