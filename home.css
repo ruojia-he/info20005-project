@@ -151,6 +151,35 @@
     transform: translateY(-50%);
 }
 
+.details .selections {
+    display: flex;
+    min-width: 100%;
+    justify-content: space-between;
+}
+
+.details .selections .addOn-0 .btn{
+    padding: 20px;
+    border-style: solid;
+    border-color: black;
+}
+
+.details .selections .bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 2px;
+    border-style: solid;
+    border-color: black;
+}
+
+.details .bg .btn {
+    padding: 20px;
+}
+
+.details .bg p {
+    padding: 20px;
+}
+
 /* checkout */
 .checkout {
     background-color: #e2e2e2;
@@ -176,6 +205,14 @@
     width: 40%;
 }
 
+.checkout .container .summary .btn.disabled{
+    cursor: not-allowed;
+}
+
+.checkout .container .summary .btn.disabled:hover{
+    opacity: 1;
+}
+
 .checkout .container .steps .btn {
     margin-top: 2%;
     border-radius: 10px;
@@ -190,4 +227,48 @@
     border-radius: 5px;
     outline-color: #BABABA;
     outline-width: 1px;
+}
+
+
+.total-purchase .btn {
+    min-width: 45%;
+}
+
+.total-purchase .btn:hover {
+    opacity: 1;
+    cursor: not-allowed;
+}
+
+.total-purchase .btn.active {
+    min-width: 45%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.steps.step-1 > .bg-1 > .done,
+.steps.step-1 > .bg-2 > .step,
+.steps.step-1 > .bg-3 > .step,
+.steps.step-1 > .bg-4 > .step,
+.steps.step-2 > .bg-1 > .doing,
+.steps.step-2 > .bg-2 > .done,
+.steps.step-2 > .bg-3 > .step,
+.steps.step-2 > .bg-4 > .step,
+.steps.step-3 > .bg-1 > .doing,
+.steps.step-3 > .bg-2 > .doing,
+.steps.step-3 > .bg-3 > .done,
+.steps.step-3 > .bg-4 > .step,
+.steps.step-4 > .bg-1 > .doing,
+.steps.step-4 > .bg-2 > .doing,
+.steps.step-4 > .bg-3 > .doing,
+.steps.step-4 > .bg-4 > .done {
+    display: none;
+}
+
+.steps.step-2 > .bg.bg-1,
+.steps.step-3 > .bg.bg-1,
+.steps.step-3 > .bg.bg-2,
+.steps.step-4 > .bg.bg-1,
+.steps.step-4 > .bg.bg-2,
+.steps.step-4 > .bg.bg-3 {
+    cursor: pointer;
 }

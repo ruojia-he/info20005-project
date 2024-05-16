@@ -16,54 +16,71 @@ function overlayOff() {
 const closeButton = document.querySelector('.sidebar-close');
 closeButton.addEventListener('click', () => {overlayOff()});
 
-
-/* total-purchase 
-const totalPurchaseBtn = document.getElementById("total-purchase-btn");
-
-function btnActive() {
-    totalPurchaseBtn.classList.add('active');
-} */
-
-
 /* checkout steps */
-let stepOne = document.getElementById("step-one-show");
-let isStepOne = stepOne.classList.contains("step-one-show");
-
-let stepTwo = document.getElementById("step-two-show");
-let isStepTwo  = stepTwo.classList.contains("step-two-show");
-
-let stepThree = document.getElementById("step-three-show");
-let isStepThree  = stepThree.classList.contains("step-three-show");
-
-function steps() {
-    if(isStepOne) {
-        document.querySelectorAll(".step-one-done").forEach(a=>a.style.display = "initial");
-        document.querySelectorAll(".step-one-show").forEach(a=>a.style.display = "none");
-        document.querySelectorAll(".step-two-show").forEach(a=>a.style.display = "initial");
-    } else if(isStepTwo) {
-        document.querySelectorAll(".step-two-done").forEach(a=>a.style.display = "initial");
-        document.querySelectorAll(".step-two-show").forEach(a=>a.style.display = "none");
-        document.querySelectorAll(".step-three-show").forEach(a=>a.style.display = "initial");
-    } else if(isStepThree) {
-        document.querySelectorAll(".step-three-done").forEach(a=>a.style.display = "initial");
-        document.querySelectorAll(".step-three-show").forEach(a=>a.style.display = "none");
+function moveTo(toStep, isCard = true, event) {
+    let steps = document.querySelector(".steps");
+    let current = Number.parseInt(steps.classList[1].replace("step-", ""));
+     let totalPurchaseBtn = document.getElementById("total-purchase-btn"); 
+    if(isCard && toStep > current) {
+        return;
+    }
+    steps.classList.remove("step-" + current);
+    steps.classList.add("step-" + toStep);
+     if(toStep == 4) {
+        totalPurchaseBtn.classList.add('active');
+        totalPurchaseBtn.disabled = false;
+    } else {
+        totalPurchaseBtn.classList.remove('active');
+        totalPurchaseBtn.disabled = true;
+    }
+    if(event) {
+        event.stopPropagation();
     }
 }
 
-
-
-let picked = document.getElementById("picked");
-let isPicked = picked.classList.contains("picked");
-
-let shipped = document.getElementById("shipped");
-let isShipped = picked.classList.contains("shipped");
-
-function deliveryMethod() {
+/* */
+function deliveryMethod(isPicked) {
+    let picked = document.getElementById("picked");
+    let shipped = document.getElementById("shipped");
     if(isPicked) {
-        document.querySelectorAll(".shipped").forEach(a=>a.style.display = "initial");
-        document.querySelectorAll(".picked").forEach(a=>a.style.display = "none");
-    } else if (isShipped) {
-        document.querySelectorAll(".picked").forEach(a=>a.style.display = "initial");
-        document.querySelectorAll(".shipped").forEach(a=>a.style.display = "none");      
+        shipped.style.display = 'none';
+        picked.style.display = 'initial';
     }
+    else {
+        picked.style.display = 'none';
+        shipped.style.display = 'initial';
+    }  
+}
+
+/* redirect to check out */
+document.getElementById("redirectButton").addEventListener("click", redirect);
+function redirect(){ window.location = "checkout.html"; }
+
+document.getElementById("total-purchase-btn").addEventListener("click", redirectHome);
+function redirectHome(){ window.location = "home.html"; }
+
+
+/* add to cart */
+function addToCart(addON){ 
+    let cartIcon = document.querySelector(".cart-icon");
+    let addIcon = document.getElementById("add");
+    let sideIcon = document.getElementById("sidebar");
+    
+    let current = Number.parseInt(cartIcon.classList[1].replace("c-", ""));
+
+    cartIcon.classList.remove("c-" + current);
+    addIcon.classList.remove("addOn-" + current);
+    sideIcon.classList.remove("item-" + current);
+
+    current += addON;
+
+    if(current >= 2) {
+        current = 2;
+    } else if (current <= 0) {
+        current = 0;
+    }
+
+    cartIcon.classList.add("c-" + current);
+    addIcon.classList.add("addOn-" + current);
+    sideIcon.classList.add("item-" + current);
 }
