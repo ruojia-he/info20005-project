@@ -1,5 +1,5 @@
 /* sidebar cart */
-.sidebar {
+#sidebar {
     display: flex;
     flex-direction: column;
     z-index: 3;
@@ -13,29 +13,33 @@
     transition: right 0.3s ease-in-out;
 }
 
-.sidebar.open {
+#sidebar.open {
     right: 0;
 }
 
-.sidebar>h3 {
+#sidebar h3 {
     padding: 5%;
 }
 
-.sidebar .sidebar-contents {
-    flex-grow: 1;
-}
-
-.sidebar .sidebar-close {
+#sidebar .sidebar-close {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
 }
 
-.sidebar .total-purchase {
-    bottom: 0px;
+.on {
+    flex-grow: 1;
 }
 
+.off {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* overlay */
 #overlay {
     z-index: 2;
     position: fixed;
@@ -62,9 +66,6 @@
     max-width: 40%;
     max-height: 40%;
 }
-
-
-
 
 /* checkout, purchase bar settings */
 .total-purchase {
@@ -112,16 +113,6 @@
     font-weight: bolder;
 }
 
-.total-purchase>.btn {
-    font-size: 22px;
-    padding: 3% 16%;
-    background-color: #F0FAD4;
-}
-
-.total-purchase>.btn.active {
-    background-color: white;
-}
-
 /* sidebar setting */
 .sidebar .total-purchase {
     background-size: cover;
@@ -129,4 +120,28 @@
     margin: 0;
     border: none;
     border-radius: 0;
+}
+
+.cart-icon.c-0>.c-1,
+.cart-icon.c-0>.c-2,
+.cart-icon.c-1>.c-0,
+.cart-icon.c-1>.c-2,
+.cart-icon.c-2>.c-0,
+.cart-icon.c-2>.c-1,
+.add.addOn-0 .addOn-1,
+.add.addOn-0 .addOn-2,
+.add.addOn-1 .addOn-0,
+.add.addOn-1 .addOn-2,
+.add.addOn-2 .addOn-0,
+.add.addOn-2 .addOn-1 {
+    display: none;
+}
+
+.sidebar.item-0 .on,
+.sidebar.item-0 .total-purchase,
+.sidebar.item-1 .off,
+.sidebar.item-1 .on .item-2,
+.sidebar.item-2 .off,
+.sidebar.item-2 .on .item-1 {
+    display: none;
 }

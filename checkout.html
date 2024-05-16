@@ -40,53 +40,67 @@
     <main class="checkout">
         <h2>Confirm Order</h2>
         <section class="container">   
-            <div class="steps">
-                <div class="bg">
+            <div class="steps step-1">
+                <div class="bg bg-1" onclick="moveTo(1)">
                     <p>1. Your Email</p>
-                    <span class="step-one-show" id="step-one-show">
-                        <input type="text" placeholder="Email" name="q">
+                    <div class="step doing">
+                        <input type="text" placeholder="Email" name="q" />
                         <label for="" class="centered-x" style="font-size: 11px;">You'll receive receipts and notifications at this email address.</label>
-                        <button class="btn" onclick="steps()">Continue</button>
-                    </span>
-                    <span class="step-one-done" id="step-one-done" style="display: none;">
+                        <button class="btn" onclick="moveTo(2, false, event)">Continue</button>
+                    </div>
+                    <div class="step done">
                         <p>test@test.com</p>
-                    </span>
+                    </div>
                 </div>
-
-                <div class="bg">
+                <div class="bg bg-2" onclick="moveTo(2)">
                     <p>2. Delivery Methods/Date</p>
-                    <span class="step-two-show" id="step-two-show" style="display: none">
-                        <button class="btn" onclick="deliveryMethod()">picked</button>
-                        <button class="btn" onclick="deliveryMethod()">shipped</button>
-                        <span class="picked" id="picked">
-                            <label for="">Date</label>
-                            <input type="date">
-                            <button class="btn" onclick="steps()">Continue</button>
-                        </span>
-                        <span class="shipped" id="picked" style="display: none">
-                            <label for="">Date</label>
-                            <input type="date">
-                            <button class="btn" onclick="steps()">Continue</button>
-                        </span>
-                    </span>
-                    <span class="step-two-done" id="step-two-done" style="display: none">
+                    <div class="step doing">
+                        <button class="btn" onclick="deliveryMethod(1)">Picked Up - $0</button>
+                        <button class="btn"  onclick="deliveryMethod(0)">Delivery - $10</button>
+                        <div class="picked" id="picked">
+                            <h4>Address</h4>
+                            <p>40 Stephensen Street, Spotswood</p>
+                            <p>VIC 3015, Australia</p>
+                            <h4>Delivery Date *</h4>
+                            <input type="date" />
+                            <button class="btn" onclick="moveTo(3, false, event)">Continue</button>
+                        </div>
+                        <div class="shipped" id="shipped" style="display:none">
+                            <label for="">Shipped</label>
+                            <input type="date" />
+                            <button class="btn" onclick="moveTo(3, false, event)">Continue</button>
+                        </div>
+                    </div>
+                    <span class="step done">
+                        <button class="btn" onclick="deliveryMethod(1)">Picked Up - $0</button>
+                        <button class="btn" onclick="deliveryMethod(0)">Delivery - $10</button>
                         <p>Address</p>
                     </span>
                 </div>
 
-                <div class="bg">
+                <div class="bg bg-3" onclick="moveTo(3)">
                     <p>3. Payment & Discounts</p>
-                    <span class="step-three-show" id="step-three-show" style="display: none">
-                        <label for="">Date</label>
-                        <input type="date">
-                        <button class="btn" onclick="steps()">Continue</button>
+                    <span class="step doing">
+                        <label for="">Card Number</label>
+                        <input type="text" placeholder="1234 1234 1234 1234">
+                        <div style="display:flex;">
+                            <div>
+                                <h4>Expiration</h4>
+                                <input type="text" placeholder="1234 1234 1234 1234">
+                            </div>
+                            <div>
+                                <h4>CVC</h4>
+                                <input type="text" placeholder="1234 1234 1234 1234">
+                            </div>
+                        </div>
+                        <button class="btn" onclick="moveTo(4, false, event)">Continue</button>
                     </span>
-                    <span class="step-three-done" id="step-three-done" style="display: none">
+                    <span class="step done">
                         <p>card number<p>
                     </span>
                 </div>
 
-                <div class="bg">
+                <div class="bg bg-4">
                     <p>4. Review & Purchase</p>
                 </div>
             </div>
@@ -121,12 +135,12 @@
                             <p class="price-final">$200</p>
                         </div>
                     </div>
-                    <button class="btn" id="total-purchase-btn"><a href="#">Button</a></button>
+                    <button class="btn" id="total-purchase-btn" disabled>Button</button>
                 </div>
             </div>
         </section>
 
-        <!-- footer -->>
+        <!-- footer -->
         <footer class="footer">
             <div class="footer-social-media">
                 <img src="/images/contacts.png">
@@ -149,14 +163,14 @@
 
         <!-- side bar -->
         <div class="sidebar" id="sidebar" style="display: flex; flex-direction:column;">
-            <img class="sidebar-close" src="/images/close.png"></img>
+            <img class="sidebar-close" src="/images/close.png">
             <h3 class="centered-x">My Cart</h3>
             <div class="sidebar-contents">
                 <div class="bg">
                     <div class="order-item">
                         <img src="/images/menu1.png" alt="logo">
                         <p>Name</p>
-                        <img class="close" src="/images/close.png"></img>
+                        <img class="close" src="/images/close.png">
                     </div>
                 </div>
                 <div class="bg">
@@ -166,13 +180,13 @@
                             <p>Name</p>
                         </div>
                         <div class="">
-                            <img class="close" src="/images/close.png"></img>
+                            <img class="close" src="/images/close.png">
                             <p>$20</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="total-purchase" onclick="btnActive()">
+            <div class="total-purchase">
                 <div class="price">
                     <div class="price-row">
                         <p>Subtotal</p>
@@ -190,7 +204,7 @@
                         <p class="price-final">$200</p>
                     </div>
                 </div>
-                <button class="btn" id="total-purchase-btn"><a href="checkout.html">Button</a></button>
+                <button class="btn active" id="redirectButton">Button</button>
             </div>
         </div>
     </main>
