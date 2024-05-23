@@ -1,7 +1,7 @@
 /* side bar */
 const sidebar = document.getElementById('sidebar');
 const overlay = document.getElementById("overlay");
-
+const overlaylight = document.getElementById("overlay-light");
 
 function overlayOn() {
     overlay.style.display = "block";
@@ -20,7 +20,7 @@ closeButton.addEventListener('click', () => {overlayOff()});
 function moveTo(toStep, isCard = true, event) {
     let steps = document.querySelector(".steps");
     let current = Number.parseInt(steps.classList[1].replace("step-", ""));
-     let totalPurchaseBtn = document.getElementById("total-purchase-btn"); 
+    let totalPurchaseBtn = document.getElementById("total-purchase-btn"); 
     if(isCard && toStep > current) {
         return;
     }
@@ -83,4 +83,21 @@ function addToCart(addON){
     cartIcon.classList.add("c-" + current);
     addIcon.classList.add("addOn-" + current);
     sideIcon.classList.add("item-" + current);
+}
+
+
+/* dropdowns */
+function dropDownOn(option) {
+    let dropDown = document.getElementById("dropdown");
+    dropDown.classList.toggle("open");
+}
+
+function dropDownOff(option) {
+    let dropDown = document.getElementById("dropdown");
+    let current = Number.parseInt(dropDown.classList[1].replace("d-", ""));
+
+    dropDown.classList.remove("open");
+
+    dropDown.classList.remove("d-" + current);
+    dropDown.classList.add("d-" + option);
 }

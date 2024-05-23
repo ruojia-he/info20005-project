@@ -105,6 +105,107 @@ p {
     opacity: 0.7;
 }
 
+/* dropdown */
+.selections .dropdown-title .dropdown.d-1 .dropdown-2,
+.selections .dropdown-title .dropdown.d-1 .dropdown-3,
+.selections .dropdown-title .dropdown.d-1 .dropdown-4,
+.selections .dropdown-title .dropdown.d-2 .dropdown-1, 
+.selections .dropdown-title .dropdown.d-2 .dropdown-3,
+.selections .dropdown-title .dropdown.d-2 .dropdown-4,
+.selections .dropdown-title .dropdown.d-3 .dropdown-1, 
+.selections .dropdown-title .dropdown.d-3 .dropdown-2,
+.selections .dropdown-title .dropdown.d-3 .dropdown-4, 
+.selections .dropdown-title .dropdown.d-4 .dropdown-1, 
+.selections .dropdown-title .dropdown.d-4 .dropdown-2,
+.selections .dropdown-title .dropdown.d-4 .dropdown-3 {
+    display: none;
+}
+
+
+.selections .dropdown-title .dropdown.d-1.open .o1,
+.selections .dropdown-title .dropdown.d-2.open .o2,
+.selections .dropdown-title .dropdown.d-3.open .o3,
+.selections .dropdown-title .dropdown.d-4.open .o4 {
+    background-color: green;
+}
+
+
+
+.selections {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.selections .dropdown-title {
+    width: 50%;
+}
+
+.selections .dropdown-title .bg {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 6.5%;
+}
+
+.selections img {
+    width: 15%;
+}
+
+.drop{
+    display: flex;
+}
+
+.dropdown img {
+    transform: rotate(270deg);
+    transition: 0.3s;
+}
+
+.dropdown.open img {
+    transform: rotate(90deg);
+}
+
+.dropdown {
+    min-width: 70%;
+}
+
+.dropdown .btn {
+    padding: 20px;
+}
+
+.dropdown .dropdown-content {  
+    width: 10%;
+}
+
+.dropdown ul {
+    background-color: black;
+
+}
+
+.dropdown li{
+    cursor: pointer;
+    width: 100%;
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    transition: 0.3s;
+}
+
+.dropdown li:hover {
+    opacity: 0.7;
+}
+
+.dropdown ul {
+    display: none;
+}
+
+.dropdown.open ul {
+    z-index: 3;
+    display: block;
+    position: absolute;
+}
+
 /* alignments */
 .centered-x {
     display: flex;
@@ -129,25 +230,24 @@ p {
 }
 
 /* food tags */
-.btn-tag {
-    display: inline-block;
-    border-color: transparent;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.5s;
+.tags {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 0.2%;
+    min-width: 60%;
+}
+
+.btn.tag {
+    text-align: center;
+    min-width: 20%;
     border-radius: 5px;
     padding: 2px 8px;
-    color: #747474;
-    background-color: #e2e2e2;
+    color: #989898;
+    background-color: #F5F5F5;
     margin: 5px 10px;
     margin-right: 0px;
-    font-size: 12px;
+    font-size: 15px;
 }
-
-.btn-tag:hover {
-    opacity: 0.7;
-}
-
 /* navbar */
 .navbar {
     z-index: 1;

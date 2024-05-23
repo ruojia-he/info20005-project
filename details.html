@@ -45,7 +45,7 @@
         </div>
     </nav>
     
-    <main class="details">
+    <main class="details" style="background-color: white;">
         <section class="container">
             <div class="item-detail">
                 <div class="item-description">
@@ -54,19 +54,19 @@
                         <h1>The Baby Graze</h1>
                     </div>
                     <img src="/images/menu1.png">
-                    <div >
-                        <div style="display: flex;">
-                            <div class="btn-tag">
+                    <div style="display: flex; justify-content: space-between;">
+                        <div class="tags">
+                            <div class="btn tag">
                                 Fast
                             </div>
-                            <div class="btn-tag">
+                            <div class="btn tag">
                                 Fast
                             </div>
-                            <div class="btn-tag">
+                            <div class="btn tag">
                                 Fast
                             </div>
                         </div>
-                        <p>$20</p>
+                        <p style="font-size: 300%; padding: 0px;">$20</p>
                     </div>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt nobis porro odit exercitationem maxime libero 
                         architecto atque voluptas, ab asperiores vitae vel eveniet veniam omnis optio deserunt illum dolorem sed.</p>
@@ -92,25 +92,49 @@
                         </div>
                     </div>
                     <div class="selections">
-                        <div class="dropdown">
-                            <p>dropdown,</p>
+                        <div class="dropdown-title">
+                            <p>options</p>
+                            <div class="dropdown d-1" id="dropdown">
+                                <div class="bg dropdown-1" onclick="dropDownOn(1)">
+                                    <p>Standard</p>
+                                    <img src="/images/back.png">
+                                </div>
+                                <div class="bg dropdown-2" onclick="dropDownOn(2)">
+                                    <p>Gluten Free</p>
+                                    <img src="/images/back.png">
+                                </div>
+                                <div class="bg dropdown-3" onclick="dropDownOn(3)">
+                                    <p>Vegeterian</p>
+                                    <img src="/images/back.png">
+                                </div>
+                                <div class="bg dropdown-4" onclick="dropDownOn(4)">
+                                    <p>Vegan</p>
+                                    <img src="/images/back.png">
+                                </div>
+                                <ul class="dropdown-content">
+                                    <li class="o1" onclick="dropDownOff(1)">Standard</li>
+                                    <li class="o2" onclick="dropDownOff(2)">Gluten Free</li>
+                                    <li class="o3" onclick="dropDownOff(3)">Vegeterian</li>
+                                    <li class="o4" onclick="dropDownOff(4)">Vegan</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="add addOn-0" id="add">
                             <div class="addOn-0">
-                                <button class="btn" onclick="addToCart(1)">add to cart</button>
+                                <button class="btn" onclick="addToCart(1)">Add to Cart</button>
                             </div>
                             <div class="addOn-1">
                                 <div class="bg">
-                                    <button class="btn" onclick="addToCart(-1)">-</button>
+                                    <button class="btn leftright" onclick="addToCart(-1)">-</button>
                                     <p>1</p>
-                                    <button class="btn" onclick="addToCart(1)">+</button>
+                                    <button class="btn leftright" onclick="addToCart(1)">+</button>
                                 </div>
                             </div>
                             <div class="addOn-2">
                                 <div class="bg">
-                                    <button class="btn" onclick="addToCart(-1)">-</button>
+                                    <button class="btn leftright" onclick="addToCart(-1)">-</button>
                                     <p>2</p>
-                                    <button class="btn" onclick="addToCart(1)">+</button>
+                                    <button class="btn leftright" onclick="addToCart(1)">+</button>
                                 </div>
                             </div>
                         </div>
@@ -118,7 +142,7 @@
 
                 </div>
             </div>
-            <h1 class="centered-x">Let's Cook</h1>
+            <h1 class="centered-x" style="margin-top: 7%">Let's Cook</h1>
             <div class="grid-two-two">
                 <div class="centered-x">
                     <img src="/images/menu1.png">

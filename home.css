@@ -55,7 +55,7 @@
 .menu-page .container {
     display: flex;
     justify-content: center;
-    margin-bottom: 2%;
+    padding-bottom: 4%;
 }
 
 .menu-page .container .search-bar {
@@ -64,7 +64,8 @@
     max-height: 60px;
     background: white;
     margin: 0 1%;
-    padding: 2%;
+    padding: 8%;
+    margin-bottom: 10%;
     border-radius: 20px;
 }
 
@@ -107,6 +108,7 @@
     justify-items: center;
     align-items: center;
     grid-template-columns: 60% 40%;
+    
 }
 
 .details .container .item-detail .item-description {
@@ -117,7 +119,7 @@
 
 .details .container .item-detail .item-description > img{
     margin-top: 1%;
-    height: 20rem;
+    height: 25rem;
 }
 
 .details .container .item-detail .item-description h1 {
@@ -135,12 +137,11 @@
     font-family: 'Lancelot';
     color: #595E70;
     font-size: 50px;
-
 }
 
-.details .container .grid-two-two .centered-x img{
-    width: 514px;
-    height: 311px;
+.details .selections {
+    display: flex;
+    align-items: end;
 }
 
 .details .container .item-detail #ingredients .bg {
@@ -151,33 +152,45 @@
     transform: translateY(-50%);
 }
 
-.details .selections {
-    display: flex;
-    min-width: 100%;
-    justify-content: space-between;
+/* add to cart button*/
+.details .selections .add {
+    width: 40%;
 }
 
-.details .selections .addOn-0 .btn{
-    padding: 20px;
+.details .selections .add .btn{
+    width: 100%;
+    padding: 12%;
+    background-color: #FFE079;
+    color: #895F52;
     border-style: solid;
-    border-color: black;
+    border-radius: 10px;
+    border-color: #895F52;
 }
 
-.details .selections .bg{
+.details .selections .add .btn.leftright {
+    height: 100%;
+    background-color: transparent;
+    color: #895F52;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.details .selections .add p {
+    padding: 0 20%;
+}
+
+.details .selections .bg {
+    margin: 0;
+    width: 100%;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     outline: 2px;
     border-style: solid;
-    border-color: black;
-}
-
-.details .bg .btn {
-    padding: 20px;
-}
-
-.details .bg p {
-    padding: 20px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #B5B5B5;
 }
 
 /* checkout */
