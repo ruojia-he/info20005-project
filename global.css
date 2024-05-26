@@ -106,30 +106,38 @@ p {
 }
 
 /* dropdown */
-.selections .dropdown-title .dropdown.d-1 .dropdown-2,
-.selections .dropdown-title .dropdown.d-1 .dropdown-3,
-.selections .dropdown-title .dropdown.d-1 .dropdown-4,
-.selections .dropdown-title .dropdown.d-2 .dropdown-1, 
-.selections .dropdown-title .dropdown.d-2 .dropdown-3,
-.selections .dropdown-title .dropdown.d-2 .dropdown-4,
-.selections .dropdown-title .dropdown.d-3 .dropdown-1, 
-.selections .dropdown-title .dropdown.d-3 .dropdown-2,
-.selections .dropdown-title .dropdown.d-3 .dropdown-4, 
-.selections .dropdown-title .dropdown.d-4 .dropdown-1, 
-.selections .dropdown-title .dropdown.d-4 .dropdown-2,
-.selections .dropdown-title .dropdown.d-4 .dropdown-3 {
+.dropdown-title .dropdown.d-1 .dropdown-2,
+.dropdown-title .dropdown.d-1 .dropdown-3,
+.dropdown-title .dropdown.d-1 .dropdown-4,
+.dropdown-title .dropdown.d-2 .dropdown-1, 
+.dropdown-title .dropdown.d-2 .dropdown-3,
+.dropdown-title .dropdown.d-2 .dropdown-4,
+.dropdown-title .dropdown.d-3 .dropdown-1, 
+.dropdown-title .dropdown.d-3 .dropdown-2,
+.dropdown-title .dropdown.d-3 .dropdown-4, 
+.dropdown-title .dropdown.d-4 .dropdown-1, 
+.dropdown-title .dropdown.d-4 .dropdown-2,
+.dropdown-title .dropdown.d-4 .dropdown-3,
+.dropdown-title .dropdown.d-1 .dropdown-content,
+.dropdown-title .dropdown.d-2 .dropdown-content,
+.dropdown-title .dropdown.d-3 .dropdown-content,
+.dropdown-title .dropdown.d-4 .dropdown-content {
     display: none;
 }
 
-
-.selections .dropdown-title .dropdown.d-1.open .o1,
-.selections .dropdown-title .dropdown.d-2.open .o2,
-.selections .dropdown-title .dropdown.d-3.open .o3,
-.selections .dropdown-title .dropdown.d-4.open .o4 {
-    background-color: green;
+.dropdown-title .dropdown.d-1.open .dropdown-content,
+.dropdown-title .dropdown.d-2.open .dropdown-content,
+.dropdown-title .dropdown.d-3.open .dropdown-content,
+.dropdown-title .dropdown.d-4.open .dropdown-content {
+    display: initial;
 }
 
-
+.dropdown-title .dropdown.d-1 .o1,
+.dropdown-title .dropdown.d-2 .o2,
+.dropdown-title .dropdown.d-3 .o3,
+.dropdown-title .dropdown.d-4 .o4 {
+    background-color: #92C352;
+}
 
 .selections {
     display: flex;
@@ -175,15 +183,12 @@ p {
 }
 
 .dropdown .dropdown-content {  
-    width: 10%;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
 }
 
-.dropdown ul {
-    background-color: black;
-
-}
-
-.dropdown li{
+.dropdown-content p{
     cursor: pointer;
     width: 100%;
     background-color: white;
