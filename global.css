@@ -181,13 +181,13 @@ p {
 
 .dropdown .dropdown-content {  
     position: absolute;
-    transform: translateY(-5%);
+    transform: translateY(-10px);
     background-color: #f9f9f9;
-    width: 100%;
     border-style: solid;
     border-color: grey;
     border-width: 1px;
     border-top: transparent;
+    height: 171px;
 }
 
 .dropdown-content p{
@@ -195,11 +195,7 @@ p {
     width: 100%;
     background-color: white;
     transition: 0.3s;
-    padding: 4% 10%;
-}
-
-.dropdown li:hover {
-    opacity: 0.7;
+    padding: 10px 20px;
 }
 
 .dropdown ul {
