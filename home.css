@@ -17,7 +17,7 @@
     width: 100vw;
     height: 930px;
     padding: 5% 10%;
-    background: url('/images/home1.png') no-repeat;
+    background: url('/images/home.png') no-repeat;
     background-position: center top;
     background-size: cover;
 }
@@ -35,7 +35,7 @@
     width: 100vw;
     height: 930px;
     padding: 3% 6%;
-    background: url('/images/home1.png') no-repeat;
+    background: url('/images/home-two.png') no-repeat;
     background-position: center top;
     background-size: cover;
     text-align: center;
@@ -60,10 +60,6 @@
     width: 100vw;
     height: 930px;
     padding: 0px 6%;
-    background: url('/images/home1.png') no-repeat;
-    background-position: center top;
-    background-size: cover;
-
     display: flex; 
     justify-content: space-between; 
     align-items: center;
@@ -71,7 +67,6 @@
 
 .page-three .centered-x {
     justify-content: space-between;
-
     height: 60%;
     text-align: center;
     max-width: 35%;
@@ -115,16 +110,37 @@
 .page-five {
     width: 100vw;
     height: 930px;
-    background: url('/images/home1.png') no-repeat;
+    background: url('/images/home-five.png') no-repeat;
     background-position: center top;
     background-size: cover;
 }
+
 .page-five .centered-x{
     display: flex;
-    
     align-items: center;
     justify-content: space-between;
 }
+
+.page-five > div {
+    margin: auto;
+    width: 900px;
+    height: 900px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.page-five h1, 
+.page-five h2, 
+.page-five p {
+    color: white;
+}
+
+.page-five img {
+    margin-bottom: 20px;
+    width: 15%;
+}
+
 
 /* Menu Page */
 .menu-page {

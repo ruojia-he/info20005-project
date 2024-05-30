@@ -64,8 +64,6 @@ h2 {
     font-size: 50px;
     color: #595E70;
     font-weight: normal;
-    display: flex;
-    justify-content: center;
     padding-top: 1%;
     padding-bottom: 1%;
 }
