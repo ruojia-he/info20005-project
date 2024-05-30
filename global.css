@@ -45,6 +45,11 @@ input {
     color: #C1DE6F;
 }
 
+.left-text {
+    text-align: left;
+    padding-left: 10%;
+}
+
 /* Homepage Title */
 h1 {
     font-family: "Lancelot", sans-serif;
@@ -236,7 +241,7 @@ p {
 .tags {
     display: flex;
     align-items: flex-end;
-    margin-bottom: 0.2%;
+    margin-bottom: 1%;
     min-width: 60%;
 }
 
@@ -248,7 +253,7 @@ p {
     color: #989898;
     background-color: #F5F5F5;
     margin: 5px 10px;
-    margin-right: 0px;
+    margin-left: 0px;
     font-size: 15px;
 }
 /* navbar */

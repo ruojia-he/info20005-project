@@ -32,7 +32,7 @@
                 </ul>
             </div>
             <div class="cart-icon" onclick="overlayOn()">
-                <img src="/images/shopping-icon.png">
+                <img src="/images/shopping-icon.svg">
             </div>
         </div>
     </nav>
@@ -55,8 +55,10 @@
                 <div class="bg bg-2" onclick="moveTo(2)">
                     <p>2. Delivery Methods/Date</p>
                     <div class="step doing">
-                        <button class="btn" onclick="deliveryMethod(1)">Picked Up - $0</button>
-                        <button class="btn"  onclick="deliveryMethod(0)">Delivery - $10</button>
+                        <div style="display: flex; width:50%;">
+                            <button class="btn" id="pic-btn" onclick="deliveryMethod(1)">Picked Up - $0</button>
+                            <button class="btn white" id="del-btn" onclick="deliveryMethod(0)">Delivery - $10</button>
+                        </div>
                         <div class="picked" id="picked">
                             <h4>Address</h4>
                             <p>40 Stephensen Street, Spotswood</p>
@@ -72,8 +74,6 @@
                         </div>
                     </div>
                     <span class="step done">
-                        <button class="btn" onclick="deliveryMethod(1)">Picked Up - $0</button>
-                        <button class="btn" onclick="deliveryMethod(0)">Delivery - $10</button>
                         <p>Address</p>
                     </span>
                 </div>

@@ -33,13 +33,13 @@
             </div>
             <div class="cart-icon c-0" id="cart-icon" onclick="overlayOn()">
                 <div class="c-0">
-                    <img src="/images/shopping-icon.png">
+                    <img src="/images/shopping-icon.svg">
                 </div>
                 <div class="c-1">
-                    <img src="/images/shopping-icon-one.png">
+                    <img src="/images/shopping-icon-one.svg">
                 </div>
                 <div class="c-2">
-                    <img src="/images/shopping-icon-two.png">
+                    <img src="/images/shopping-icon-two.svg">
                 </div>
             </div>
         </div>
@@ -54,22 +54,27 @@
                         <h1>The Baby Graze</h1>
                     </div>
                     <img src="/images/menu1.png">
-                    <div style="display: flex; justify-content: space-between;">
-                        <div class="tags">
-                            <div class="btn tag">
-                                Fast
+                    <div class="tag-description">
+                        <div class="tag-price">
+                            <div class="tags">
+                                <div class="btn tag">
+                                    Fast
+                                </div>
+                                <div class="btn tag">
+                                    Fast
+                                </div>
+                                <div class="btn tag">
+                                    Fast
+                                </div>
                             </div>
-                            <div class="btn tag">
-                                Fast
-                            </div>
-                            <div class="btn tag">
-                                Fast
+                            <div style="display: flex; align-items: baseline;">
+                                <p>from</p>
+                                <p style="font-size: 300%; padding: 0px;">$20</p>
                             </div>
                         </div>
-                        <p style="font-size: 300%; padding: 0px;">$20</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt nobis porro odit exercitationem maxime libero 
+                            architecto atque voluptas, ab asperiores vitae vel eveniet veniam omnis optio deserunt illum dolorem sed.</p>
                     </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt nobis porro odit exercitationem maxime libero 
-                        architecto atque voluptas, ab asperiores vitae vel eveniet veniam omnis optio deserunt illum dolorem sed.</p>
                 </div>
                 <div class="centered-x">
                     <h2>What</h2>
@@ -92,22 +97,22 @@
                         </div>
                     </div>
                     <div class="selections">
-                        <div class="dropdown-title">
+                        <div class="dropdown-title add">
                             <p>options</p>
                             <div class="dropdown d-1" id="dropdown">
-                                <div class="bg dropdown-1" onclick="dropDownOn(1)">
+                                <div class="bg btn dropdown-1" onclick="dropDownOn(1)">
                                     <p>Standard</p>
                                     <img src="/images/back.png">
                                 </div>
-                                <div class="bg dropdown-2" onclick="dropDownOn(2)">
+                                <div class="bg btn dropdown-2" onclick="dropDownOn(2)">
                                     <p>Gluten Free</p>
                                     <img src="/images/back.png">
                                 </div>
-                                <div class="bg dropdown-3" onclick="dropDownOn(3)">
+                                <div class="bg btn dropdown-3" onclick="dropDownOn(3)">
                                     <p>Vegeterian</p>
                                     <img src="/images/back.png">
                                 </div>
-                                <div class="bg dropdown-4" onclick="dropDownOn(4)">
+                                <div class="bg btn dropdown-4" onclick="dropDownOn(4)">
                                     <p>Vegan</p>
                                     <img src="/images/back.png">
                                 </div>
@@ -124,14 +129,14 @@
                                 <button class="btn" onclick="addToCart(1)">Add to Cart</button>
                             </div>
                             <div class="addOn-1">
-                                <div class="bg">
+                                <div class="bg btn">
                                     <button class="btn leftright" onclick="addToCart(-1)">-</button>
                                     <p>1</p>
                                     <button class="btn leftright" onclick="addToCart(1)">+</button>
                                 </div>
                             </div>
                             <div class="addOn-2">
-                                <div class="bg">
+                                <div class="bg btn">
                                     <button class="btn leftright" onclick="addToCart(-1)">-</button>
                                     <p>2</p>
                                     <button class="btn leftright" onclick="addToCart(1)">+</button>
@@ -139,10 +144,9 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-            <h1 class="centered-x" style="margin-top: 7%">Let's Cook</h1>
+            <h1 class="centered-x" style="margin-top: 40px;">Let's Cook</h1>
             <div class="grid-two-two">
                 <div class="centered-x">
                     <img src="/images/menu1.png">
@@ -166,6 +170,7 @@
                 </div>
             </div>
         </section>
+
         <!-- footer -->
         <footer class="footer">
             <div class="footer-social-media">
@@ -199,23 +204,31 @@
                     <div class="bg">
                         <div class="order-item">
                             <div class="item-description">
-                                <img src="/images/menu1.png" alt="logo">
-                                <div>
-                                    <div class="item-1">
-                                        <p>Name One Item</p>
-                                        <button class="btn" onclick="addToCart(-1)">-</button>
-                                        <p>2</p>
-                                        <button class="btn" onclick="addToCart(1)">+</button>
+                                <img src="/images/menu1.png">
+                                <div class="add item-1">
+                                    <div class="left-text">
+                                        <p>Name</p>
+                                        <p>description</p>
                                     </div>
-                                    <div class="item-2">
-                                        <p>Name Two Items</p>
-                                        <button class="btn" onclick="addToCart(-1)">-</button>
+                                    <div class="bg btn side">
+                                        <button class="btn side leftright" onclick="addToCart(-1)">-</button>
+                                        <p>1</p>
+                                        <button class="btn side leftright" onclick="addToCart(1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="add item-2">
+                                    <div class="left-text">
+                                        <p>Name</p>
+                                        <p>description</p>
+                                    </div>     
+                                    <div class="bg btn side">
+                                        <button class="btn side leftright" onclick="addToCart(-1)">-</button>
                                         <p>2</p>
-                                        <button class="btn" onclick="addToCart(1)">+</button>
+                                        <button class="btn side leftright" onclick="addToCart(1)">+</button>
                                     </div>
                                 </div>
                             </div>
-                            <div onclick="addToCart(-99)" class="" style="cursor:pointer">
+                            <div onclick="addToCart(-99)" class="right-side">
                                 <img class="close" src="/images/close.png">
                                 <p>$20</p>
                             </div>

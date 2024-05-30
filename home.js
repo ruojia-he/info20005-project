@@ -42,13 +42,19 @@ function moveTo(toStep, isCard = true, event) {
 function deliveryMethod(isPicked) {
     let picked = document.getElementById("picked");
     let shipped = document.getElementById("shipped");
+    let picBTN = document.getElementById("pic-btn");
+    let delBTN = document.getElementById("del-btn");
     if(isPicked) {
         shipped.style.display = 'none';
         picked.style.display = 'initial';
+        delBTN.classList.add("white");
+        picBTN.classList.remove("white");
     }
     else {
         picked.style.display = 'none';
         shipped.style.display = 'initial';
+        picBTN.classList.add("white");
+        delBTN.classList.remove("white");
     }  
 }
 
