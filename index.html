@@ -39,24 +39,61 @@
         </div>
     </nav>
     
-    <main>
-        <section class="page-one">
-            <div class="container">
+    <main class="homepage">
+        <section class="container">
+            <div class="page-one">
                 <h1>Grazing,</h1>
                 <h1>Catering,</h1>
                 <h1 class="green-txt">Family Meals</h1>
                 <a href="menu.html"><button type="button" class="btn">Get Started →</button></a>
             </div>
         </section>
-        <section class="page-two">
-            <div class="container">
-                <h1>Grazing,</h1>
-                <h1>Catering,</h1>
-                <h1 class="green-txt">Family Meals</h1>
-                <a href="menu.html"><button type="button" class="btn">Get Started →</button></a>
+        <section class="container">
+            <div class="page-two centered-x">
+                <img src="/images/page-two.svg">
+                <div>
+                    <h1>Home Of Delicious Boxes</h1>
+                    <p>Little Fork Collective source our healthy ingredients from local sustainable suppliers across Victoria, 
+                        using only the finest locally sourced ingredients.</p>
+                </div>
             </div>
         </section>
+        <div class="container">
+            <div class="page-three">
+                <div class="centered-x">
+                    <div>
+                        <h1>Text</h1>
+                        <p>Little Fork Collective source our healthy ingredients from local sustainable suppliers across Victoria, using only
+                        the finest locally sourced ingredients.</p>
+                    </div>
 
+                    <a href="menu.html"><button type="button" class="btn">Get Started →</button></a>
+                </div>
+                <div class="grid-two-two">
+                    <img src="/images/menu1.png">
+                    <img src="/images/menu1.png">
+                    <img src="/images/menu1.png">
+                    <img src="/images/menu1.png">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="page-four centered-x">
+                <h1>How it Works</h1>
+                <div class="centered-x">
+                    <img src="/images/methods-one.png">
+                    <img src="/images/methods-two.png">
+                    <img src="/images/methods-three.png">
+                    <img src="/images/methods-four.png">
+                </div>
+            </div>
+        </div>
+        <section class="container">
+            <div class="page-five centered-x">
+                <h1>About Us</h1>
+                <img src="/images/back.png" style="transform: rotate(180deg);">
+            </div>
+        </section>
         <!-- footer -->
         <footer class="footer">
             <div class="footer-social-media">
@@ -80,49 +117,11 @@
 
 
         <!-- side bar -->
-        <div class="sidebar" id="sidebar" style="display: flex; flex-direction:column;">
+        <div class="sidebar item-0" id="sidebar" style="display: flex; flex-direction:column;">
             <img class="sidebar-close" src="/images/close.png">
             <h3 class="centered-x">My Cart</h3>
-            <div class= "sidebar-contents">
-                <div class="bg">
-                    <div class="order-item">
-                        <img src="/images/menu1.png" alt="logo">
-                        <p>Name</p>
-                        <img class="close" src="/images/close.png">
-                    </div>
-                </div>
-                <div class="bg">
-                    <div class="order-item">
-                        <div class="item-description">
-                            <img src="/images/menu1.png" alt="logo">
-                            <p>Name</p>
-                        </div>
-                        <div class="">
-                            <img class="close" src="/images/close.png">
-                            <p>$20</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="total-purchase">
-                <div class="price">
-                    <div class="price-row">
-                        <p>Subtotal</p>
-                        <p>$200</p>
-                    </div>
-                    <div class="price-row">
-                        <p>Shipping</p>
-                        <p>$0</p>
-                    </div>
-                    <div class="price-row">
-                        <div class="price-detail">
-                            <p class="price-cnt">5 Items,</p>
-                            <p class="price-total">Total</p>
-                        </div>
-                        <p class="price-final">$200</p>
-                    </div>
-                </div>
-                <button class="btn active" id="redirectButton">Button</button>
+            <div class="off">
+                <p>Your Cart is Empty</p>
             </div>
         </div>
     </main>

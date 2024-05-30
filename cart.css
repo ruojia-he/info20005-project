@@ -145,3 +145,11 @@
 .sidebar.item-2 .on .item-1 {
     display: none;
 }
+
+.add div{
+    height: 60px;
+}
+
+.add div button {
+    height: 100%;
+}
