@@ -64,6 +64,7 @@ h2 {
     font-size: 50px;
     color: #595E70;
     font-weight: normal;
+
     padding-top: 1%;
     padding-bottom: 1%;
 }
@@ -229,6 +230,10 @@ p {
     padding: 3%;
     margin: 3%;
     text-align: center;
+}
+
+.bg.flex {
+    display: flex;
 }
 
 /* food tags */

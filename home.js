@@ -1,17 +1,24 @@
 /* side bar */
 const sidebar = document.getElementById('sidebar');
+const mobileMenu = document.getElementById('mobile-menu');
 const overlay = document.getElementById("overlay");
-const overlaylight = document.getElementById("overlay-light");
 
 function overlayOn() {
-    overlay.style.display = "block";
     sidebar.classList.add('open');
+    overlay.style.display = "block";
+}
+
+function overlayMobileOn() {
+    mobileMenu.classList.add('open');
+    overlay.style.display = "block";
 }
 
 function overlayOff() {
     overlay.style.display = "none";
     sidebar.classList.remove('open');
+    mobileMenu.classList.remove('open');
 }
+
 
 const closeButton = document.querySelector('.sidebar-close');
 closeButton.addEventListener('click', () => {overlayOff()});
@@ -63,7 +70,7 @@ document.getElementById("redirectButton").addEventListener("click", redirect);
 function redirect(){ window.location = "checkout.html"; }
 
 document.getElementById("total-purchase-btn").addEventListener("click", redirectHome);
-function redirectHome(){ window.location = "home.html"; }
+function redirectHome(){ window.location = "index.html"; }
 
 
 /* add to cart */
@@ -93,7 +100,7 @@ function addToCart(addON){
 
 
 /* dropdowns */
-function dropDownOn(option) {
+function dropDownOn() {
     let dropDown = document.getElementById("dropdown");
     dropDown.classList.toggle("open");
 }

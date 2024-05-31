@@ -22,8 +22,8 @@
 
 #sidebar .sidebar-close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 38px;
+    right: 38px;
     cursor: pointer;
 }
 
@@ -40,7 +40,7 @@
 
 /* overlay */
 #overlay {
-    z-index: 2;
+    z-index: 1;
     position: fixed;
     display: none;
     width: 100%;
@@ -218,6 +218,7 @@
 .add .bg.btn.side {
     border-color: transparent;
     height: 20%;
+    justify-content: start;
 }
 
 .add .bg.btn.side p {
@@ -230,4 +231,5 @@
     font-size: 15px;
     color: black;
     margin: 0;
+    width: 40px;
 }
