@@ -45,11 +45,6 @@ input {
     color: #C1DE6F;
 }
 
-.left-text {
-    text-align: left;
-    padding-left: 10%;
-}
-
 /* Homepage Title */
 h1 {
     font-family: "Lancelot", sans-serif;
@@ -77,12 +72,20 @@ h3 {
     font-weight: thin;
 }
 
+h4 {
+    font-family: "Lato", "Poppins", sans-serif;
+    font-size: 17px;
+    color: black;
+    font-weight: thin;
+}
+
 /* Description etc */
 p {
     font-family: "Lato", "Poppins", sans-serif;
     color: #595E70;
     font-weight: normal;
 }
+
 /* Utility */
 .container {
     margin: 0px auto;
@@ -178,6 +181,7 @@ p {
     transform: rotate(90deg);
 }
 
+
 .dropdown .dropdown-content {  
     position: absolute;
     transform: translateY(-10px);
@@ -219,7 +223,7 @@ p {
 
 .grid-two-two {
     display: grid;
-    justify-items: center;
+    justify-items: start;
     grid-template-columns: repeat(2, 1fr);
     gap: 3%;
 }

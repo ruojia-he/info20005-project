@@ -19,6 +19,18 @@
 <body>
     <nav class="navbar">
         <div class="container">
+            <!-- hamburger -->
+            <div class="hamburger">
+                <img class="hamburger-menu" onclick="overlayMobileOn()" src="/images/hamburger-menu.svg">
+                <div class="mobile-menu" id="mobile-menu">
+                    <ul>
+                        <li><a href="menu.html">View Menu</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Partners</a></li>
+                        <li><a href="#">Customer Service</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="logo">
                 <a href="index.html">
                     <img src="/images/logo.png" alt="logo">
@@ -62,10 +74,10 @@
                                     Fast
                                 </div>
                                 <div class="btn tag">
-                                    Fast
+                                    Easy
                                 </div>
                                 <div class="btn tag">
-                                    Fast
+                                    GF
                                 </div>
                             </div>
                             <div style="display: flex; align-items: baseline;">
@@ -73,8 +85,9 @@
                                 <p style="font-size: 300%; padding: 0px;">$20</p>
                             </div>
                         </div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt nobis porro odit exercitationem maxime libero 
-                            architecto atque voluptas, ab asperiores vitae vel eveniet veniam omnis optio deserunt illum dolorem sed.</p>
+                        <p style="color: #BCBCBC;">A huge selection of delicious ingredients local and imported cheese, candied nuts, a selection of dips, olives, salami,
+                        proscuitto, including our popular homemade seeded crackers, dried and fresh fruit and some sweet treats from our friends
+                        at b+f. One Size for 2-4 people.</p>
                     </div>
                 </div>
                 <div class="centered-x">
@@ -99,21 +112,21 @@
                     </div>
                     <div class="selections">
                         <div class="dropdown-title add">
-                            <p>options</p>
+                            <p>Options</p>
                             <div class="dropdown d-1" id="dropdown">
-                                <div class="bg btn dropdown-1" onclick="dropDownOn(1)">
+                                <div class="bg btn dropdown-1" onclick="dropDownOn()">
                                     <p>Standard</p>
                                     <img src="/images/back.png">
                                 </div>
-                                <div class="bg btn dropdown-2" onclick="dropDownOn(2)">
+                                <div class="bg btn dropdown-2" onclick="dropDownOn()">
                                     <p>Gluten Free</p>
                                     <img src="/images/back.png">
                                 </div>
-                                <div class="bg btn dropdown-3" onclick="dropDownOn(3)">
+                                <div class="bg btn dropdown-3" onclick="dropDownOn()">
                                     <p>Vegeterian</p>
                                     <img src="/images/back.png">
                                 </div>
-                                <div class="bg btn dropdown-4" onclick="dropDownOn(4)">
+                                <div class="bg btn dropdown-4" onclick="dropDownOn()">
                                     <p>Vegan</p>
                                     <img src="/images/back.png">
                                 </div>
@@ -147,26 +160,30 @@
                     </div>
                 </div>
             </div>
-            <h1 class="centered-x" style="margin-top: 40px;">Let's Cook</h1>
+            <h1 class="centered-x" style="margin-top: 60px;">Let's Cook</h1>
             <div class="grid-two-two">
                 <div class="centered-x">
                     <img src="/images/menu1.png">
-                    <p>Step 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus ullam, atque ipsum reiciendis sapiente
+                    <h3>1. Foundation</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus ullam, atque ipsum reiciendis sapiente
                     laborum quis quasi quaerat. Quo inventore in fugiat recusandae non similique iste labore mollitia corrupti!</p>
                 </div>
                 <div class="centered-x">
                     <img src="/images/menu1.png">
-                    <p>Step 2: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus ullam, atque ipsum reiciendis sapiente
+                    <h3>2. Foundation</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus ullam, atque ipsum reiciendis sapiente
                     laborum quis quasi quaerat. Quo inventore in fugiat recusandae non similique iste labore mollitia corrupti!</p>
                 </div>
                 <div class="centered-x">
                     <img src="/images/menu1.png">
-                    <p>Step 3: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus ullam, atque ipsum reiciendis
+                    <h3>3. Foundation</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus ullam, atque ipsum reiciendis
                     sapiente laborum quis quasi quaerat. Quo inventore in fugiat recusandae non similique iste labore mollitia corrupti!</p>
                 </div>
                 <div class="centered-x">
                     <img src="/images/menu1.png">
-                    <p>Step 4: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus ullam, atque ipsum reiciendis
+                    <h3>4. Foundation</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus ullam, atque ipsum reiciendis
                     sapiente laborum quis quasi quaerat. Quo inventore in fugiat recusandae non similique iste labore mollitia corrupti!</p>
                 </div>
             </div>
@@ -208,8 +225,8 @@
                                 <img src="/images/menu1.png">
                                 <div class="add item-1">
                                     <div class="left-text">
-                                        <p>Name</p>
-                                        <p>description</p>
+                                        <h4>The Baby Graze</h4>
+                                        <p>Option: <span id="choice"></span></p>
                                     </div>
                                     <div class="bg btn side">
                                         <button class="btn side leftright" onclick="addToCart(-1)">-</button>
@@ -219,8 +236,8 @@
                                 </div>
                                 <div class="add item-2">
                                     <div class="left-text">
-                                        <p>Name</p>
-                                        <p>description</p>
+                                        <h4>The Baby Graze</h4>
+                                        <p>Option: <span id="choice"></span></p>
                                     </div>     
                                     <div class="bg btn side">
                                         <button class="btn side leftright" onclick="addToCart(-1)">-</button>
@@ -241,7 +258,7 @@
                 <div class="price">
                     <div class="price-row">
                         <p>Subtotal</p>
-                        <p>$200</p>
+                        <p>$<span id="numPrice"></span></p>
                     </div>
                     <div class="price-row">
                         <p>Shipping</p>
@@ -249,10 +266,10 @@
                     </div>
                     <div class="price-row">
                         <div class="price-detail">
-                            <p class="price-cnt">5 Items,</p>
+                            <p class="price-cnt"><span id="num"></span> Items,</p>
                             <p class="price-total">Total</p>
                         </div>
-                        <p class="price-final">$200</p>
+                        <p class="price-final">$<span id="NumPrice"></span></p>
                     </div>
                 </div>
                 <button class="btn active" id="redirectButton">Button</button>

@@ -19,7 +19,6 @@ function overlayOff() {
     mobileMenu.classList.remove('open');
 }
 
-
 const closeButton = document.querySelector('.sidebar-close');
 closeButton.addEventListener('click', () => {overlayOff()});
 
@@ -44,6 +43,7 @@ function moveTo(toStep, isCard = true, event) {
         event.stopPropagation();
     }
 }
+
 
 /* */
 function deliveryMethod(isPicked) {
@@ -72,13 +72,62 @@ function redirect(){ window.location = "checkout.html"; }
 document.getElementById("total-purchase-btn").addEventListener("click", redirectHome);
 function redirectHome(){ window.location = "index.html"; }
 
+window.str = "";
+
+/* dropdown option */
+function dropDownOn() {
+    let dropDown = document.getElementById("dropdown");
+    dropDown.classList.toggle("open");
+}
+
+function dropDownOption(option) {
+    const ops = ["Standard", "GF", "Vegeterian", "Vegan"];
+    window.str = ops[option - 1];
+}
+
+function dropDownOff(option) {
+    let dropDown = document.getElementById("dropdown");
+    let current = Number.parseInt(dropDown.classList[1].replace("d-", ""));
+
+    dropDownOption(option);
+
+    let choice = document.getElementById("choice");
+    choice.innerHTML = window.str;
+
+    dropDown.classList.remove("open");
+
+    dropDown.classList.remove("d-" + current);
+    dropDown.classList.add("d-" + option);
+}
+
+/* menu drop down */
+function dropDownOffMenu(option) {
+    let dropDown = document.getElementById("dropdown");
+    let current = Number.parseInt(dropDown.classList[1].replace("d-", ""));
+
+    const ops = ["menu.html", "menuGrazing.html", "menu.html", "menu.html"];
+    window.location = ops[option - 1]; 
+
+    dropDown.classList.remove("open");
+
+    dropDown.classList.remove("d-" + current);
+    dropDown.classList.add("d-" + option);
+}
 
 /* add to cart */
 function addToCart(addON){ 
     let cartIcon = document.querySelector(".cart-icon");
     let addIcon = document.getElementById("add");
     let sideIcon = document.getElementById("sidebar");
+
+    let choice = document.getElementById("choice");
+
+    if(!window.str) {
+        window.str = "Standard";
+    }
     
+    choice.innerHTML = window.str;
+
     let current = Number.parseInt(cartIcon.classList[1].replace("c-", ""));
 
     cartIcon.classList.remove("c-" + current);
@@ -93,24 +142,11 @@ function addToCart(addON){
         current = 0;
     }
 
+    document.getElementById("num").innerHTML = current;
+    document.getElementById("numPrice").innerHTML = 20 * current;
+    document.getElementById("NumPrice").innerHTML = 20 * current;
+
     cartIcon.classList.add("c-" + current);
     addIcon.classList.add("addOn-" + current);
     sideIcon.classList.add("item-" + current);
-}
-
-
-/* dropdowns */
-function dropDownOn() {
-    let dropDown = document.getElementById("dropdown");
-    dropDown.classList.toggle("open");
-}
-
-function dropDownOff(option) {
-    let dropDown = document.getElementById("dropdown");
-    let current = Number.parseInt(dropDown.classList[1].replace("d-", ""));
-
-    dropDown.classList.remove("open");
-
-    dropDown.classList.remove("d-" + current);
-    dropDown.classList.add("d-" + option);
 }

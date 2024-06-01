@@ -120,6 +120,17 @@
     margin-right: 10px;
 }
 
+.order-item .left-text {
+    text-align: left;
+    padding-left: 10%;
+    width: 100vw;
+}
+
+.order-item .left-text p {
+    color: #666666;
+}
+
+
 .bg .order-item .item-description {
     display: flex;
     width: 80%;
