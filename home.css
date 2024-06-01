@@ -75,7 +75,7 @@
 
 .page-three .centered-x {
     justify-content: space-between;
-    height: 70%;
+    height: 67%;
     text-align: center;
     max-width: 35%;
     margin-right: 90px;
@@ -109,9 +109,13 @@
 
 .page-three button {
     font-size: 36px;
-    padding: 25px 80px;
+    padding: 25px 100px;
     color: white;
     background-color: #5FD0DF;
+}
+
+.page-three .bg.label{
+    display: none;
 }
 
 /* homepage 4 */
@@ -148,13 +152,17 @@
 }
 
 /* homepage 5 */
+
+
 .page-five {
     width: 100vw;
     height: 930px;
+    padding: 5% 10%;
     background: url('/images/home-five.png') no-repeat;
     background-position: center top;
     background-size: cover;
 }
+
 
 .page-five .centered-x{
     display: flex;
@@ -243,6 +251,22 @@
 }
 
 /* menu drop down */
+@media (min-width: 391px) {
+    .functions .dropdown-title .dropdown-content p {
+        cursor: pointer;
+        transform: translate(-2px, -4px);
+        width: 101%;
+        background-color: white;
+        transition: 0.3s;
+        padding: 10px 20px;
+    }
+
+    .functions .dropdown-title .dropdown-content {
+        position: absolute;
+        border-color: transparent;
+    }
+}
+
 .functions .dropdown-title .dropdown .bg.flex {
     margin: 0;
     cursor: pointer;
@@ -261,19 +285,6 @@
     margin-right: 5px;
 }
 
-.functions .dropdown-title .dropdown-content p {
-    cursor: pointer;
-    transform: translate(-2px, -4px);
-    width: 101%;
-    background-color: white;
-    transition: 0.3s;
-    padding: 10px 20px;
-}
-
-.functions .dropdown-title .dropdown-content {
-    position: absolute;
-    border-color: transparent;
-}
 
 .menu-page .container .grid-two-two {
     gap: 0.8% 0;
@@ -313,19 +324,23 @@
         margin-top: 1%;
         height: 25rem;
     }
+    .details .container .item-detail .item-description h1 {
+        margin-top: 1%;
+        font-size: 60px;
+    }
+    .details .container .item-detail .centered-x h2 {
+        font-family: 'Lancelot';
+        color: #595E70;
+        font-size: 45px;
+    }
 }
+
 .details .container .item-detail .item-description {
     display: flex;
     flex-direction: column;
     max-width: 85%;
 }
 
-
-
-.details .container .item-detail .item-description h1 {
-    margin-top: 1%;
-    font-size: 60px;
-}
 
 .details .container .item-detail .tag-description {
     margin: 0 auto;
@@ -339,19 +354,12 @@
     padding-bottom: 1%;
 }
 
-
-.details .container .item-detail .centered-x h2{
-    font-family: 'Lancelot';
-    color: #595E70;
-    font-size: 50px;
-}
-
 .details .selections {
     display: flex;
     align-items: end;
 }
 
-.details .container .item-detail #ingredients .bg {
+.bg.label {
     width: 80%;
     background-color: #C1DE6F;
     margin: auto;
@@ -389,6 +397,8 @@
     display: flex;
     justify-content: center;
 }
+
+@media (min-width: 391px) {}
 
 .checkout .container .steps{
     width: 40%;

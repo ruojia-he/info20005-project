@@ -1,5 +1,5 @@
 /* sidebar cart */
-#sidebar {
+.sidebar {
     display: flex;
     flex-direction: column;
     z-index: 3;
@@ -12,15 +12,15 @@
     transition: right 0.3s ease-in-out;
 }
 
-#sidebar.open {
+.sidebar.open {
     right: 0;
 }
 
-#sidebar h3 {
+.sidebar h3 {
     padding: 5%;
 }
 
-#sidebar .sidebar-close {
+.sidebar .sidebar-close {
     position: absolute;
     top: 38px;
     right: 38px;

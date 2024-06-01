@@ -19,6 +19,59 @@
 <body>
     <nav class="navbar">
         <div class="container">
+            <!-- hamburger -->
+            <div class="hamburger">
+                <img class="hamburger-menu" onclick="overlayMobileOn()" src="/images/hamburger-menu.svg">
+                <div class="mobile-menu" id="mobile-menu">
+                    <div>
+                        <div class="green-div">
+                            <div>
+                                <p>Welcome To</p>
+                                <img src="/images/logo.png" alt="logo" />
+                            </div>
+                            <img src="/images/close.png" />
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="menu.html">
+                                    <div>
+                                        <img src="/images/back.png" />
+                                        <p>View Menu</p>
+                                    </div>
+                                    <img src="/images/back.png" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <img src="/images/back.png" />
+                                        <p>About Us</p>
+                                    </div>
+                                    <img src="/images/back.png" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <img src="/images/back.png" />
+                                        <p>Our Partners</p>
+                                    </div>
+                                    <img src="/images/back.png" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <img src="/images/back.png" />
+                                        <p>Customer Service</p>
+                                    </div>
+                                    <img src="/images/back.png" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="logo">
                 <a href="index.html">
                     <img src="/images/logo.png" alt="logo">
@@ -33,7 +86,7 @@
                 </ul>
             </div>
             <div class="cart-icon" onclick="overlayOn()">
-                <img src="/images/shopping-icon-one.svg">
+                <img src="/images/shopping-icon.svg">
             </div>
         </div>
     </nav>
@@ -98,7 +151,7 @@
                             </div>
                             <div>
                                 <h4>CVC</h4>
-                                <input type="text" placeholder="CVC" style="width: 95%; padding: 9px;">
+                                <input type="text" placeholder="CVC" style="width: 94%; padding: 9px;">
                             </div>
                         </div>
                         <button class="btn" onclick="moveTo(4, false, event)">Continue</button>

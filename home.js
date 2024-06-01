@@ -91,8 +91,10 @@ function dropDownOff(option) {
 
     dropDownOption(option);
 
-    let choice = document.getElementById("choice");
-    choice.innerHTML = window.str;
+    let choice = document.getElementsByClassName("choice");
+    for(var i=0; i<choice.length; i++) {
+        choice[i].innerHTML = window.str;
+    }
 
     dropDown.classList.remove("open");
 
@@ -102,16 +104,8 @@ function dropDownOff(option) {
 
 /* menu drop down */
 function dropDownOffMenu(option) {
-    let dropDown = document.getElementById("dropdown");
-    let current = Number.parseInt(dropDown.classList[1].replace("d-", ""));
-
     const ops = ["menu.html", "menuGrazing.html", "menu.html", "menu.html"];
     window.location = ops[option - 1]; 
-
-    dropDown.classList.remove("open");
-
-    dropDown.classList.remove("d-" + current);
-    dropDown.classList.add("d-" + option);
 }
 
 /* add to cart */
@@ -120,13 +114,15 @@ function addToCart(addON){
     let addIcon = document.getElementById("add");
     let sideIcon = document.getElementById("sidebar");
 
-    let choice = document.getElementById("choice");
+    let choice = document.getElementsByClassName("choice");
 
     if(!window.str) {
         window.str = "Standard";
     }
-    
-    choice.innerHTML = window.str;
+
+    for(var i=0; i<choice.length; i++) {
+        choice[i].innerHTML = window.str;
+    }
 
     let current = Number.parseInt(cartIcon.classList[1].replace("c-", ""));
 
