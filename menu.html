@@ -15,11 +15,65 @@
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="media.css">
 </head>
 
 <body>
     <nav class="navbar">
         <div class="container">
+            <!-- hamburger -->
+            <div class="hamburger">
+                <img class="hamburger-menu" onclick="overlayMobileOn()" src="/images/hamburger-menu.svg">
+                <div class="mobile-menu" id="mobile-menu">
+                    <div>
+                        <div class="green-div">
+                            <div>
+                                <p>Welcome To</p>
+                                <img src="/images/logo.png" alt="logo" />
+                            </div>
+                            <img src="/images/close.png" />
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="menu.html">
+                                    <div>
+                                        <img src="/images/back.png" />
+                                        <p>View Menu</p>
+                                    </div>
+                                    <img src="/images/back.png" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <img src="/images/back.png" />
+                                        <p>About Us</p>
+                                    </div>
+                                    <img src="/images/back.png" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <img src="/images/back.png" />
+                                        <p>Our Partners</p>
+                                    </div>
+                                    <img src="/images/back.png" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <img src="/images/back.png" />
+                                        <p>Customer Service</p>
+                                    </div>
+                                    <img src="/images/back.png" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="logo">
                 <a href="index.html">
                     <img src="/images/logo.png" alt="logo">
@@ -34,28 +88,36 @@
                 </ul>
             </div>
             <div class="cart-icon" onclick="overlayOn()">
-                <img src="/images/shopping-icon.png">
+                <img src="/images/shopping-icon.svg">
             </div>
         </div>
     </nav>
-
-    <main >
+    <main>
         <section class="menu-page">
-            <h2>Our Menu</h2>
+            <h2 class="centered-x">Our Menu</h2>
             <div class="container">
-                <div>
-                    <form action="index.html" class="search-bar">
-                        <button type="submit"><image src="/images/search-bar.png"></button>
-                        <input type="text" placeholder="Search" name="q">
-                    </form>
-                    <div class="dropdown" id="dropdown">
-                        <button class="btn dropdown" onclick="dropDownOn()">Options</button>
-                        <ul class="dropdown-content">
-                            <li onclick="dropDownOff()">Standard</li>
-                            <li onclick="dropDownOff()">Gluten Free</li>
-                            <li onclick="dropDownOff()">Vegeterian</li>
-                            <li onclick="dropDownOff()">Vegan</li>
-                        </ul>
+                <div class="functions">
+                    <div>
+                        <form action="index.html" class="search-bar">
+                            <button type="submit">
+                                <image src="/images/search-bar.png">
+                            </button>
+                            <input type="text" placeholder="Search">
+                        </form>
+                    </div>
+                    <div class="dropdown-title">
+                        <div class="dropdown d-1" id="dropdown">
+                            <div class="bg flex dropdown-1" onclick="dropDownOn()">
+                                <p>All Menus</p>
+                                <img src="/images/back.png">
+                            </div>
+                            <div class="dropdown-content" id="dropdown-content">
+                                <p class="o1" onclick="dropDownOffMenu(1)">All Menus</p>
+                                <p class="o2" onclick="dropDownOffMenu(2)">Grazing</p>
+                                <p class="o3" onclick="dropDownOffMenu(3)">Meals</p>
+                                <p class="o4" onclick="dropDownOffMenu(4)">Treats</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="grid-two-two">
@@ -134,49 +196,11 @@
         </footer>
 
         <!-- side bar -->
-        <div class="sidebar" id="sidebar">
-            <img class="sidebar-close" src="/images/close.png">
+        <div class="sidebar item-0" id="sidebar" style="display: flex; flex-direction:column;">
+            <img class="sidebar-close" onclick="overlayOff()" src="/images/close.png">
             <h3 class="centered-x">My Cart</h3>
-            <div class="sidebar-contents">
-                <div class="bg">
-                    <div class="order-item">
-                        <img src="/images/menu1.png" alt="logo">
-                        <p>Name</p>
-                        <img class="close" src="/images/close.png">
-                    </div>
-                </div>
-                <div class="bg">
-                    <div class="order-item">
-                        <div class="item-description">
-                            <img src="/images/menu1.png" alt="logo">
-                            <p>Name</p>
-                        </div>
-                        <div class="">
-                            <img class="close" src="/images/close.png">
-                            <p>$20</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="total-purchase">
-                <div class="price">
-                    <div class="price-row">
-                        <p>Subtotal</p>
-                        <p>$200</p>
-                    </div>
-                    <div class="price-row">
-                        <p>Shipping</p>
-                        <p>$0</p>
-                    </div>
-                    <div class="price-row">
-                        <div class="price-detail">
-                            <p class="price-cnt">5 Items,</p>
-                            <p class="price-total">Total</p>
-                        </div>
-                        <p class="price-final">$200</p>
-                    </div>
-                </div>
-                <button class="btn active" id="redirectButton">Button</button>
+            <div class="off">
+                <p>Your Cart is Empty</p>
             </div>
         </div>
     </main>

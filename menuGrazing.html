@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lancelot&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="main-menu">
+                <ul>
+                    <li><a href="menu.html">View Menu</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Partners</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                </ul>
+            </div>
+            <div class="cart-icon" onclick="overlayOn()">
+                <img src="/images/shopping-icon.svg">
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="menu-page">
+            <h2 class="centered-x">Our Menu</h2>
+            <div class="container">
+                <div class="functions">
+                    <div>
+                        <form action="index.html" class="search-bar">
+                            <button type="submit">
+                                <image src="/images/search-bar.png">
+                            </button>
+                            <input type="text" placeholder="Search" name="q">
+                        </form>
+                    </div>
+                    <div class="dropdown-title">
+                        <div class="dropdown d-1" id="dropdown">
+                            <div class="bg flex dropdown-1" onclick="dropDownOn()">
+                                <p>Grazing</p>
+                                <img src="/images/back.png">
+                            </div>
+                            <div class="dropdown-content" id="dropdown-content">
+                                <p class="o1" onclick="dropDownOffMenu(1)" style="background-color: white;">All Menus</p>
+                                <p class="o2" onclick="dropDownOffMenu(2)" style="background-color: #92C352;">Grazing</p>
+                                <p class="o3" onclick="dropDownOffMenu(3)">Meals</p>
+                                <p class="o4" onclick="dropDownOffMenu(4)">Treats</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-two-two">
+                    <div class="bg">
+                        <a href="details.html"><img src="/images/menu1.png"></a>
+                        <h3>The Baby Graze</h3>
+                        <a href="menu.html"><button type="button" class="btn tag">FAST</button></a>
+                        <a href="menu.html"><button type="button" class="btn tag">EASY</button></a>
+                        <a href="menu.html"><button type="button" class="btn tag">GF</button></a>
+                    </div>
+                    <div class="bg">
+                        <a href="details2.html"><img src="/images/menu1.png"></a>
+                        <h3>The Baby Graze</h3>
+                        <a href="menu.html"><button type="button" class="btn tag">FAST</button></a>
+                        <a href="menu.html"><button type="button" class="btn tag">EASY</button></a>
+                        <a href="menu.html"><button type="button" class="btn tag">GF</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-social-media">
+                <img src="/images/contacts.png">
+            </div>
+            <div class="container-footer">
+                <div class="footer-links">
+                    <a href="#">Beau + Frank - Snacks and Treats</a>
+                    <a href="#">Our Partners</a>
+                    <a href="#">Food Shelf Life</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Customer Service</a>
+                </div>
+                <div class="footer-contacts">
+                    <p>+61 438440474</p>
+                    <p>amanda@littleforkcollective.kitchen</p>
+                    <p>Little Fork Collective Spotswood, VIC Australia</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- side bar -->
+        <div class="sidebar item-0" id="sidebar" style="display: flex; flex-direction:column;">
+            <img class="sidebar-close" src="/images/close.png">
+            <h3 class="centered-x">My Cart</h3>
+            <div class="off">
+                <p>Your Cart is Empty</p>
+            </div>
+        </div>
+    </main>
+    <div id="overlay" onclick="overlayOff()"></div>
+</body>
+<script src="/home.js"></script>
+
+</html>

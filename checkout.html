@@ -14,10 +14,64 @@
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="media.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
+            <!-- hamburger -->
+            <div class="hamburger">
+                <img class="hamburger-menu" onclick="overlayMobileOn()" src="/images/hamburger-menu.svg">
+                <div class="mobile-menu" id="mobile-menu">
+                    <div>
+                        <div class="green-div">
+                            <div>
+                                <p>Welcome To</p>
+                                <img src="/images/logo.png" alt="logo" />
+                            </div>
+                            <img src="/images/close.png" />
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="menu.html">
+                                    <div>
+                                        <img src="/images/back.png" />
+                                        <p>View Menu</p>
+                                    </div>
+                                    <img src="/images/back.png" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <img src="/images/back.png" />
+                                        <p>About Us</p>
+                                    </div>
+                                    <img src="/images/back.png" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <img src="/images/back.png" />
+                                        <p>Our Partners</p>
+                                    </div>
+                                    <img src="/images/back.png" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <img src="/images/back.png" />
+                                        <p>Customer Service</p>
+                                    </div>
+                                    <img src="/images/back.png" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="logo">
                 <a href="index.html">
                     <img src="/images/logo.png" alt="logo">
@@ -32,19 +86,19 @@
                 </ul>
             </div>
             <div class="cart-icon" onclick="overlayOn()">
-                <img src="/images/shopping-icon.png">
+                <img src="/images/shopping-icon.svg">
             </div>
         </div>
     </nav>
     
     <main class="checkout">
-        <h2>Confirm Order</h2>
-        <section class="container">   
+        <h2 class="centered-x">Confirm Order</h2>
+        <section class="container"  style="margin-bottom: 30px;">   
             <div class="steps step-1">
                 <div class="bg bg-1" onclick="moveTo(1)">
-                    <p>1. Your Email</p>
+                    <h4>1. Your Email</h4>
                     <div class="step doing">
-                        <input type="text" placeholder="Email" name="q" />
+                        <input type="text" placeholder="Email">
                         <label for="" class="centered-x" style="font-size: 11px;">You'll receive receipts and notifications at this email address.</label>
                         <button class="btn" onclick="moveTo(2, false, event)">Continue</button>
                     </div>
@@ -53,75 +107,106 @@
                     </div>
                 </div>
                 <div class="bg bg-2" onclick="moveTo(2)">
-                    <p>2. Delivery Methods/Date</p>
+                    <h4>2. Delivery Methods/Date</h4>
                     <div class="step doing">
-                        <button class="btn" onclick="deliveryMethod(1)">Picked Up - $0</button>
-                        <button class="btn"  onclick="deliveryMethod(0)">Delivery - $10</button>
+                        <div style="display: flex; width:50%;">
+                            <button class="btn" id="pic-btn" onclick="deliveryMethod(1)">Picked Up - $0</button>
+                            <button class="btn white" id="del-btn" onclick="deliveryMethod(0)">Delivery - $10</button>
+                        </div>
                         <div class="picked" id="picked">
                             <h4>Address</h4>
                             <p>40 Stephensen Street, Spotswood</p>
                             <p>VIC 3015, Australia</p>
                             <h4>Delivery Date *</h4>
-                            <input type="date" />
+                            <input type="date">
                             <button class="btn" onclick="moveTo(3, false, event)">Continue</button>
                         </div>
                         <div class="shipped" id="shipped" style="display:none">
                             <label for="">Shipped</label>
-                            <input type="date" />
+                            <input type="date">
                             <button class="btn" onclick="moveTo(3, false, event)">Continue</button>
                         </div>
                     </div>
                     <span class="step done">
-                        <button class="btn" onclick="deliveryMethod(1)">Picked Up - $0</button>
-                        <button class="btn" onclick="deliveryMethod(0)">Delivery - $10</button>
-                        <p>Address</p>
+                        <div style="display: flex; width:50%;">
+                            <button class="btn" id="pic-btn" onclick="deliveryMethod(1)">Picked Up - $0</button>
+                            <button class="btn white" id="del-btn" onclick="deliveryMethod(0)">Delivery - $10</button>
+                        </div>
+                        <h4>Address</h4>
+                        <p>40 Stephensen Street, Spotswood</p>
+                        <p>VIC 3015, Australia</p>
+                        <h4>Delivery Date</h4>
                     </span>
                 </div>
 
                 <div class="bg bg-3" onclick="moveTo(3)">
-                    <p>3. Payment & Discounts</p>
-                    <span class="step doing">
-                        <label for="">Card Number</label>
+                    <h4>3. Payment & Discounts</h4>
+                    <div class="step doing">
+                        <h4>Card Number</h4>
                         <input type="text" placeholder="1234 1234 1234 1234">
                         <div style="display:flex;">
-                            <div>
+                            <div style="margin-right: 60px;">
                                 <h4>Expiration</h4>
-                                <input type="text" placeholder="1234 1234 1234 1234">
+                                <input type="date" style="width: 135%;">
                             </div>
                             <div>
                                 <h4>CVC</h4>
-                                <input type="text" placeholder="1234 1234 1234 1234">
+                                <input type="text" placeholder="CVC" style="width: 94%; padding: 9px;">
                             </div>
                         </div>
                         <button class="btn" onclick="moveTo(4, false, event)">Continue</button>
-                    </span>
-                    <span class="step done">
-                        <p>card number<p>
-                    </span>
+                    </div>
+                    <div class="step done">
+                        <h4>Card Number</h4>
+                        <p>1234 1234 1234 1234</p>
+                        <div style="display:flex;">
+                            <div style="margin-right: 30px">
+                                <h4>Expiration</h4>
+                                <p>05 / 2024</p>
+                            </div>
+                            <div>
+                                <h4>CVC</h4>
+                                <p>123</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="bg bg-4">
-                    <p>4. Review & Purchase</p>
+                    <h4>4. Review & Purchase</h4>
                 </div>
             </div>
 
             <div class="summary">
-                <div class="bg">
-                    <p>Order Summary</p>
-                    <div class="order-item">
-                        <img src="/images/menu1.png" alt="logo">
-                        <p>Name</p>
-                    </div>
-                    <div class="order-item">
-                        <img src="/images/menu1.png" alt="logo">
-                        <p>Name</p>
+                <div class="sidebar-contents">
+                    <div class="bg">
+                        <div class="order-item">
+                            <div class="item-description">
+                                <img src="/images/menu1.png" />
+                                <div class="add item-1">
+                                    <div class="left-text">
+                                        <h4>The Baby Graze</h4>
+                                        <p>Option: Standard </p>
+                                    </div>
+                                    <div class="bg btn side">
+                                        <button class="btn side leftright">-</button>
+                                        <p>1</p>
+                                        <button class="btn side leftright">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-side">
+                                <img class="close" src="/images/close.png" />
+                                <p>$20</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="total-purchase">
                     <div class="price">
                         <div class="price-row">
                             <p>Subtotal</p>
-                            <p>$200</p>
+                            <p>$20</p>
                         </div>
                         <div class="price-row">
                             <p>Shipping</p>
@@ -129,10 +214,10 @@
                         </div>
                         <div class="price-row">
                             <div class="price-detail">
-                                <p class="price-cnt">5 Items,</p>
+                                <p class="price-cnt">1 Items,</p>
                                 <p class="price-total">Total</p>
                             </div>
-                            <p class="price-final">$200</p>
+                            <p class="price-final">$20</p>
                         </div>
                     </div>
                     <button class="btn" id="total-purchase-btn" disabled>Button</button>
@@ -162,26 +247,31 @@
         </footer>
 
         <!-- side bar -->
-        <div class="sidebar" id="sidebar" style="display: flex; flex-direction:column;">
-            <img class="sidebar-close" src="/images/close.png">
+        <div class="sidebar item-1" id="sidebar" style="display: flex; flex-direction:column;">
+            <img class="sidebar-close" onclick="overlayOff()" src="/images/close.png">
             <h3 class="centered-x">My Cart</h3>
-            <div class="sidebar-contents">
-                <div class="bg">
-                    <div class="order-item">
-                        <img src="/images/menu1.png" alt="logo">
-                        <p>Name</p>
-                        <img class="close" src="/images/close.png">
-                    </div>
-                </div>
-                <div class="bg">
-                    <div class="order-item">
-                        <div class="item-description">
-                            <img src="/images/menu1.png" alt="logo">
-                            <p>Name</p>
-                        </div>
-                        <div class="">
-                            <img class="close" src="/images/close.png">
-                            <p>$20</p>
+            <div class="on">
+                <div class="sidebar-contents">
+                    <div class="bg">
+                        <div class="order-item">
+                            <div class="item-description">
+                                <img src="/images/menu1.png">
+                                <div class="add item-1">
+                                    <div class="left-text">
+                                        <h4>The Baby Graze</h4>
+                                        <p>Option: Standard</p>
+                                    </div>
+                                    <div class="bg btn side">
+                                        <button class="btn side leftright">-</button>
+                                        <p>1</p>
+                                        <button class="btn side leftright">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-side">
+                                <img class="close" src="/images/close.png">
+                                <p>$20</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -190,7 +280,7 @@
                 <div class="price">
                     <div class="price-row">
                         <p>Subtotal</p>
-                        <p>$200</p>
+                        <p>$20</p>
                     </div>
                     <div class="price-row">
                         <p>Shipping</p>
@@ -198,10 +288,10 @@
                     </div>
                     <div class="price-row">
                         <div class="price-detail">
-                            <p class="price-cnt">5 Items,</p>
+                            <p class="price-cnt">1 Items,</p>
                             <p class="price-total">Total</p>
                         </div>
-                        <p class="price-final">$200</p>
+                        <p class="price-final">$20</p>
                     </div>
                 </div>
                 <button class="btn active" id="redirectButton">Button</button>

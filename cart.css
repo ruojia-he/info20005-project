@@ -1,5 +1,5 @@
 /* sidebar cart */
-#sidebar {
+.sidebar {
     display: flex;
     flex-direction: column;
     z-index: 3;
@@ -9,22 +9,21 @@
     position: fixed;
     top: 0;
     right: -35vw;
-    /* right: -35vw; */
     transition: right 0.3s ease-in-out;
 }
 
-#sidebar.open {
+.sidebar.open {
     right: 0;
 }
 
-#sidebar h3 {
+.sidebar h3 {
     padding: 5%;
 }
 
-#sidebar .sidebar-close {
+.sidebar .sidebar-close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 38px;
+    right: 38px;
     cursor: pointer;
 }
 
@@ -41,7 +40,7 @@
 
 /* overlay */
 #overlay {
-    z-index: 2;
+    z-index: 1;
     position: fixed;
     display: none;
     width: 100%;
@@ -51,20 +50,6 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* order item on sidebar settings */ 
-.order-item {
-    background-color: white;
-    border-radius: 20px;
-    display: flex;
-    justify-content: space-between;
-    padding: 2% 1%;
-}
-
-.order-item img {
-    max-width: 40%;
-    max-height: 40%;
 }
 
 /* checkout, purchase bar settings */
@@ -122,6 +107,54 @@
     border-radius: 0;
 }
 
+.order-item {
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 1%;
+}
+
+.order-item img {
+    max-width: 40%;
+    margin-right: 10px;
+}
+
+.order-item .left-text {
+    text-align: left;
+    padding-left: 10%;
+    width: 100vw;
+}
+
+.order-item .left-text p {
+    color: #666666;
+}
+
+
+.bg .order-item .item-description {
+    display: flex;
+    width: 80%;
+}
+
+.bg .order-item .item-description .add{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bg .right-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bg .right-side img{
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 10px;
+    width: 30px;
+}
+
 .cart-icon.c-0>.c-1,
 .cart-icon.c-0>.c-2,
 .cart-icon.c-1>.c-0,
@@ -144,4 +177,70 @@
 .sidebar.item-2 .off,
 .sidebar.item-2 .on .item-1 {
     display: none;
+}
+
+
+
+/* add to cart button*/
+.add {
+    width: 40%;
+}
+
+.add div {
+    height: 60px;
+}
+
+.add div button {
+    height: 100%;
+}
+
+.add .btn {
+    width: 100%;
+    background-color: #FFE079;
+    color: #895F52;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #895F52;
+}
+
+.add .btn.leftright {
+    height: 100%;
+    background-color: transparent;
+    color: #895F52;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.add .bg.btn {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 2px;
+    background-color: white;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #B5B5B5;
+}
+
+.add .bg.btn.side {
+    border-color: transparent;
+    height: 20%;
+    justify-content: start;
+}
+
+.add .bg.btn.side p {
+    padding: 0;
+    text-align: left;
+}
+
+.add .bg .btn.side.leftright {
+    height: 30px;
+    font-size: 15px;
+    color: black;
+    margin: 0;
+    width: 40px;
 }
