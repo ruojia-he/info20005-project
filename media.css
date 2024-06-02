@@ -3,16 +3,17 @@
     flex-direction: column;
     z-index: 3;
     background-color: #F9F6F5;
-    width: 100vw;
+    width: 80vw;
     height: 100%;
     position: fixed;
     top: 0;
-    left: -100vw;
+    left: -80vw;
     transition: left 0.3s ease-in-out;
 }
 
 .mobile-menu.open {
     left: 0;
+    z-index: 3;
 }
 
 .mobile-menu ul {
@@ -90,6 +91,20 @@
     }
 
     /* homepage */
+    .homepage {
+        padding: 0px;
+        width: 100vw;
+        overflow-x: hidden;
+        position: relative;
+    }
+    
+    .checkout {
+        padding: 0px;
+        width: 100vw;
+        overflow-x: hidden;
+        position: relative;
+    }
+
     .homepage .container {
         max-width: 393px;
         max-height: 774px;
@@ -204,14 +219,13 @@
         height: 180px;
     }
 
-    .homepage .page-three
-
     /* homepage 4 */
 
     /* homepage 5 */
 
     .homepage .container .page-five {
         background: url('/images/home-five-mobile.png') no-repeat;
+        padding: 0;
     }
 
     .homepage .page-five > div{

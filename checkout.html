@@ -93,7 +93,7 @@
     
     <main class="checkout">
         <h2 class="centered-x">Confirm Order</h2>
-        <section class="container">   
+        <section class="container"  style="margin-bottom: 30px;">   
             <div class="steps step-1">
                 <div class="bg bg-1" onclick="moveTo(1)">
                     <h4>1. Your Email</h4>
@@ -182,11 +182,11 @@
                     <div class="bg">
                         <div class="order-item">
                             <div class="item-description">
-                                <img src="/images/menu1.png">
+                                <img src="/images/menu1.png" />
                                 <div class="add item-1">
                                     <div class="left-text">
                                         <h4>The Baby Graze</h4>
-                                        <p>Option: <span id="choice"></span></p>
+                                        <p>Option: Standard </p>
                                     </div>
                                     <div class="bg btn side">
                                         <button class="btn side leftright">-</button>
@@ -196,7 +196,7 @@
                                 </div>
                             </div>
                             <div class="right-side">
-                                <img class="close" src="/images/close.png">
+                                <img class="close" src="/images/close.png" />
                                 <p>$20</p>
                             </div>
                         </div>
@@ -248,7 +248,7 @@
 
         <!-- side bar -->
         <div class="sidebar item-1" id="sidebar" style="display: flex; flex-direction:column;">
-            <img class="sidebar-close" src="/images/close.png">
+            <img class="sidebar-close" onclick="overlayOff()" src="/images/close.png">
             <h3 class="centered-x">My Cart</h3>
             <div class="on">
                 <div class="sidebar-contents">

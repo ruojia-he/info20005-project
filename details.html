@@ -253,7 +253,7 @@
 
         <!-- side bar -->
         <div class="sidebar item-0" id="sidebar" style="display: flex; flex-direction:column;">
-            <img class="sidebar-close" src="/images/close.png" />
+            <img class="sidebar-close" onclick="overlayOff()" src="/images/close.png" />
             <h3 class="centered-x">My Cart</h3>
             <div class="off">
                 <p>Your Cart is Empty</p>
@@ -299,7 +299,7 @@
                 <div class="price">
                     <div class="price-row">
                         <p>Subtotal</p>
-                        <p>$<span id="numPrice"></span></p>
+                        <p>$<span class="numPrice"></span></p>
                     </div>
                     <div class="price-row">
                         <p>Shipping</p>
@@ -310,7 +310,7 @@
                             <p class="price-cnt"><span id="num"></span> Items,</p>
                             <p class="price-total">Total</p>
                         </div>
-                        <p class="price-final">$<span id="NumPrice"></span></p>
+                        <p class="price-final">$<span class="numPrice"></span></p>
                     </div>
                 </div>
                 <button class="btn active" id="redirectButton">Button</button>

@@ -19,33 +19,38 @@ function overlayOff() {
     mobileMenu.classList.remove('open');
 }
 
-const closeButton = document.querySelector('.sidebar-close');
-closeButton.addEventListener('click', () => {overlayOff()});
-
 /* checkout steps */
 function moveTo(toStep, isCard = true, event) {
     let steps = document.querySelector(".steps");
-    let current = Number.parseInt(steps.classList[1].replace("step-", ""));
     let totalPurchaseBtn = document.getElementById("total-purchase-btn"); 
+
+    /* check which step is current */
+    let current = Number.parseInt(steps.classList[1].replace("step-", ""));
+
+    /* if trying to skip step */
     if(isCard && toStep > current) {
         return;
     }
+
     steps.classList.remove("step-" + current);
     steps.classList.add("step-" + toStep);
-     if(toStep == 4) {
+
+    if(toStep == 4) {
         totalPurchaseBtn.classList.add('active');
         totalPurchaseBtn.disabled = false;
     } else {
         totalPurchaseBtn.classList.remove('active');
         totalPurchaseBtn.disabled = true;
     }
+
+    /* prevents clicking onto parent .bg */
     if(event) {
         event.stopPropagation();
     }
 }
 
 
-/* */
+/* check out page delivery method */
 function deliveryMethod(isPicked) {
     let picked = document.getElementById("picked");
     let shipped = document.getElementById("shipped");
@@ -56,8 +61,7 @@ function deliveryMethod(isPicked) {
         picked.style.display = 'initial';
         delBTN.classList.add("white");
         picBTN.classList.remove("white");
-    }
-    else {
+    } else {
         picked.style.display = 'none';
         shipped.style.display = 'initial';
         picBTN.classList.add("white");
@@ -69,6 +73,7 @@ function deliveryMethod(isPicked) {
 document.getElementById("redirectButton").addEventListener("click", redirect);
 function redirect(){ window.location = "checkout.html"; }
 
+/* redirect to home */
 document.getElementById("total-purchase-btn").addEventListener("click", redirectHome);
 function redirectHome(){ window.location = "index.html"; }
 
@@ -80,18 +85,21 @@ function dropDownOn() {
     dropDown.classList.toggle("open");
 }
 
+/* set option */
 function dropDownOption(option) {
     const ops = ["Standard", "GF", "Vegeterian", "Vegan"];
     window.str = ops[option - 1];
 }
 
+/* details page set option */
 function dropDownOff(option) {
     let dropDown = document.getElementById("dropdown");
     let current = Number.parseInt(dropDown.classList[1].replace("d-", ""));
 
-    dropDownOption(option);
-
     let choice = document.getElementsByClassName("choice");
+
+    /* set option */
+    dropDownOption(option);
     for(var i=0; i<choice.length; i++) {
         choice[i].innerHTML = window.str;
     }
@@ -109,26 +117,22 @@ function dropDownOffMenu(option) {
 }
 
 /* add to cart */
-function addToCart(addON){ 
+function addToCart(addON){
+    /* cart icon, sidebar item display, and add to cart icon 
+    all needs to be changed */
     let cartIcon = document.querySelector(".cart-icon");
-    let addIcon = document.getElementById("add");
     let sideIcon = document.getElementById("sidebar");
-
+    let addIcon = document.getElementById("add");
+    let num = document.getElementById("num");
+    let numPrice = document.getElementsByClassName("numPrice");
     let choice = document.getElementsByClassName("choice");
 
-    if(!window.str) {
-        window.str = "Standard";
-    }
-
-    for(var i=0; i<choice.length; i++) {
-        choice[i].innerHTML = window.str;
-    }
 
     let current = Number.parseInt(cartIcon.classList[1].replace("c-", ""));
 
     cartIcon.classList.remove("c-" + current);
-    addIcon.classList.remove("addOn-" + current);
     sideIcon.classList.remove("item-" + current);
+    addIcon.classList.remove("addOn-" + current);    
 
     current += addON;
 
@@ -138,11 +142,24 @@ function addToCart(addON){
         current = 0;
     }
 
-    document.getElementById("num").innerHTML = current;
-    document.getElementById("numPrice").innerHTML = 20 * current;
-    document.getElementById("NumPrice").innerHTML = 20 * current;
+    /* option change */
+    if(!window.str) {
+        window.str = "Standard";
+    }
+
+    for(var i=0; i<choice.length; i++) {
+        choice[i].innerHTML = window.str;
+    }
+
+    /* price changes */
+    num.innerHTML = current;
+    for(var i=0; i<numPrice.length; i++) {
+        numPrice[i].innerHTML = 20 * current;
+    }
 
     cartIcon.classList.add("c-" + current);
-    addIcon.classList.add("addOn-" + current);
     sideIcon.classList.add("item-" + current);
+    addIcon.classList.add("addOn-" + current);
+
+    return current;
 }

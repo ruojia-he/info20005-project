@@ -152,8 +152,6 @@
 }
 
 /* homepage 5 */
-
-
 .page-five {
     width: 100vw;
     height: 930px;
@@ -172,8 +170,8 @@
 
 .page-five > div {
     margin: auto;
-    width: 900px;
-    height: 900px;
+    width: 800px;
+    height: 800px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -397,8 +395,6 @@
     display: flex;
     justify-content: center;
 }
-
-@media (min-width: 391px) {}
 
 .checkout .container .steps{
     width: 40%;
