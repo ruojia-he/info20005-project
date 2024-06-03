@@ -21,6 +21,59 @@
 <body>
     <nav class="navbar">
         <div class="container">
+            <!-- hamburger -->
+            <div class="hamburger">
+                <img class="hamburger-menu" onclick="overlayMobileOn()" src="/images/hamburger-menu.svg">
+                <div class="mobile-menu" id="mobile-menu">
+                    <div>
+                        <div class="green-div">
+                            <div>
+                                <p>Welcome To</p>
+                                <img src="/images/logo.png" alt="logo" />
+                            </div>
+                            <img src="/images/close.svg" />
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="menu.html">
+                                    <div>
+                                        <img src="/images/back.png" />
+                                        <p>View Menu</p>
+                                    </div>
+                                    <img src="/images/back.svg" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <img src="/images/back.png" />
+                                        <p>About Us</p>
+                                    </div>
+                                    <img src="/images/back.svg" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <img src="/images/back.png" />
+                                        <p>Our Partners</p>
+                                    </div>
+                                    <img src="/images/back.svg" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <img src="/images/back.png" />
+                                        <p>Customer Service</p>
+                                    </div>
+                                    <img src="/images/back.svg" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="logo">
                 <a href="index.html">
                     <img src="/images/logo.png" alt="logo">
@@ -39,7 +92,6 @@
             </div>
         </div>
     </nav>
-
     <main>
         <section class="menu-page">
             <h2 class="centered-x">Our Menu</h2>
@@ -50,18 +102,18 @@
                             <button type="submit">
                                 <image src="/images/search-bar.png">
                             </button>
-                            <input type="text" placeholder="Search" name="q">
+                            <input type="text" placeholder="Search">
                         </form>
                     </div>
                     <div class="dropdown-title">
                         <div class="dropdown d-1" id="dropdown">
                             <div class="bg flex dropdown-1" onclick="dropDownOn()">
-                                <p>Grazing</p>
-                                <img src="/images/back.png">
+                                <p>All Menus</p>
+                                <img src="/images/back.svg">
                             </div>
                             <div class="dropdown-content" id="dropdown-content">
-                                <p class="o1" onclick="dropDownOffMenu(1)" style="background-color: white;">All Menus</p>
-                                <p class="o2" onclick="dropDownOffMenu(2)" style="background-color: #92C352;">Grazing</p>
+                                <p class="o1" onclick="dropDownOffMenu(1)">All Menus</p>
+                                <p class="o2" onclick="dropDownOffMenu(2)">Grazing</p>
                                 <p class="o3" onclick="dropDownOffMenu(3)">Meals</p>
                                 <p class="o4" onclick="dropDownOffMenu(4)">Treats</p>
                             </div>
@@ -77,11 +129,11 @@
                         <a href="menu.html"><button type="button" class="btn tag">GF</button></a>
                     </div>
                     <div class="bg">
-                        <a href="details2.html"><img src="/images/menu1.png"></a>
-                        <h3>The Baby Graze</h3>
+                        <a href="details2.html"><img src="/images/menu2.png"></a>
+                        <h3>The Daily Graze</h3>
+                        <a href="menu.html"><button type="button" class="btn tag">PORK</button></a>
                         <a href="menu.html"><button type="button" class="btn tag">FAST</button></a>
-                        <a href="menu.html"><button type="button" class="btn tag">EASY</button></a>
-                        <a href="menu.html"><button type="button" class="btn tag">GF</button></a>
+                        <a href="menu.html"><button type="button" class="btn tag">FAMILY</button></a>
                     </div>
                 </div>
             </div>
@@ -110,7 +162,7 @@
 
         <!-- side bar -->
         <div class="sidebar item-0" id="sidebar" style="display: flex; flex-direction:column;">
-            <img class="sidebar-close" src="/images/close.png">
+            <img class="sidebar-close" onclick="overlayOff()" src="/images/close.svg">
             <h3 class="centered-x">My Cart</h3>
             <div class="off">
                 <p>Your Cart is Empty</p>

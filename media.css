@@ -204,22 +204,26 @@
     }
 
     .page-three .centered-x > div {
-        width: 100%;
+        width: 391px;
+    }
+    .page-three .centered-x > div h1 {
+        margin: 0;
+        margin-right: 40px;
     }
     
     .page-three .centered-x > div > img {
-        width: 90%;
-        padding-top: 8px;
-        padding-right: 20px;
+        margin: 0;
+        width: 340px;
     }
 
     .page-three .bg.label {
         display: block;
         font-size: 13px;
     }
-    
+    .homepage .page-three a {
+        margin-right: 65px; 
+    }
     .homepage .page-three .btn {
-        margin: 0px;
         font-size: 20px;
         border-radius: 10px;
         text-align: center;
@@ -246,15 +250,19 @@
     }
 
     .page-four .mobile .right{
+        padding: 0;
         transform: rotate(180deg);
         margin: 0;
+        margin-right: 8px;
     }
     .page-four .mobile .left {
+        padding: 0;
         margin: 0;
+        margin-left: 8px;
     }
 
     .page-four .methods {
-        width: 400px;
+        width: 420px;
     }
 
     .method-imgs {
@@ -264,13 +272,17 @@
     .mobile-display {
         display: initial;
     }
+    
+    .pc-display {
+        display: none;
+    }
 
     .mobile-1 {
-        margin-left: 65px;
+        margin-left: 73px;
     }
 
     .mobile-4 {
-        margin-right: 65px;      
+        margin-right: 73px;      
     }
 
     .methods-1 .mobile-2,
@@ -343,7 +355,7 @@
 
     .menu-page .functions div {
         margin: 0;
-        margin-left: 35px;
+        margin-left: 45px;
     }
     
     .menu-page .functions .dropdown-title {
@@ -355,6 +367,7 @@
         display: flex;
         flex-direction: column;
         margin: 0 auto;
+        width: 325px;
     }
 
     .menu-page .grid-two-two .bg {
@@ -381,6 +394,7 @@
     .details .item-detail .item-description {
         flex-direction: row;
     }
+
     .details .item-detail .item-title {
         display: flex;
         align-items: center;
@@ -389,7 +403,8 @@
     }
 
     .details .item-detail .item-title img {
-        width: 70%;
+        width: 15%;
+        margin-right: 10px;
     }
     
     .details h1, 

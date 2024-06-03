@@ -79,7 +79,7 @@
 
 .page-three .centered-x {
     justify-content: space-between;
-    height: 67%;
+    height: 710px;
     text-align: center;
     max-width: 35%;
     margin-right: 90px;
@@ -93,13 +93,14 @@
 
 .page-three p {
     text-align: left;
-    width: 70%;
-    margin: 10px 35px;
+    width: 65%;
+    margin: 40px 90px;
     font-weight: thin;
 }
 
 .page-three .centered-x img {
     position: absolute;
+    margin-left: 26px;
 }
 
 .page-three .grid-two-two {
@@ -108,12 +109,13 @@
 
 .page-three .grid-two-two img {
     padding: 0%;
-    width: 100%;
+    width: 500px;
 }
 
 .page-three button {
     font-size: 36px;
     padding: 25px 100px;
+    margin-left: 20px;
     color: white;
     background-color: #5FD0DF;
 }
@@ -210,8 +212,10 @@
 .menu-page .container {
     display: flex;
     justify-content: center;
-    padding-bottom: 4%;
+    padding: 0;
+    padding-bottom: 50px;
 }
+
 .menu-page .container .selections {
     display: flex;
     flex-direction: column;
@@ -288,9 +292,11 @@
     margin-right: 5px;
 }
 
-
-.menu-page .container .grid-two-two {
-    gap: 0.8% 0;
+@media (min-width: 391px) {
+    .menu-page .container .grid-two-two {
+        width: 700px;
+        gap: 10px 0;
+    }
 }
 
 .menu-page .container .grid-two-two .bg {
@@ -323,9 +329,14 @@
         align-items: center;
         grid-template-columns: 25% 75%;
     }
+    .details .container .item-detail .item-title img {
+        cursor: pointer;
+    }
+                        
     .details .container .item-detail .item-description>img {
         margin-top: 1%;
         height: 25rem;
+
     }
     .details .container .item-detail .item-description h1 {
         margin-top: 1%;
