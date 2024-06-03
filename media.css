@@ -475,6 +475,7 @@
     .checkout .container {
         flex-direction: column;
         align-items: center;
+        margin-bottom: 30px;
     }
 
     .checkout .container .steps,
@@ -495,6 +496,10 @@
         flex-direction: column;
         justify-content: start;
         align-content: center;   
+    }
+
+    .footer .footer-social-media {
+        padding: 10px;
     }
 
     .footer div {
