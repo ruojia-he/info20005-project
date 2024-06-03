@@ -397,11 +397,11 @@
         padding: 10px 20px;
     }
     
-    .functions .dropdown-title .dropdown-content {
+    .functions .dropdown-title #dropdown-content {
         transform: translate(-44px, -6px);
         position: absolute;
         border-color: transparent;
-        width: 0px;
+        width: 170px;
     }
 
     /* details */
