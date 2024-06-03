@@ -19,6 +19,18 @@ function overlayOff() {
     mobileMenu.classList.remove('open');
 }
 
+function nextMethod(method) {
+    let methods = document.querySelector(".methods");
+    let current = Number.parseInt(methods.classList[2].replace("methods-", ""));
+
+    methods.classList.remove("methods-" + current);
+
+    current += method;
+
+    methods.classList.add("methods-" + current);
+}
+
+
 /* checkout steps */
 function moveTo(toStep, isCard = true, event) {
     let steps = document.querySelector(".steps");

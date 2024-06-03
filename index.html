@@ -55,10 +55,16 @@
         </section>
         <section class="container">
             <div class="page-two centered-x">
-                <img class="pg-two-imgs" src="/images/page-two.svg" />
-                <img class="pg-two-hide" src="images/home-two-mobile.png" />
-                <div>
-                    <h1>Home Of Delicious Boxes</h1>
+                <div class="pg-two-imgs-mobile">
+                    <img src="images/home-two-mobile.png" />
+                    <img style="position: absolute; margin: 62px 250px;" src="images/page-two-mobile.svg" />
+                </div>
+                <div class="pg-two-imgs">
+                    <img src="/images/page-two.svg" />
+                </div>
+                <div class="pg-two-contents">
+                    <h1>Home Of</h1>
+                    <h1 class="green-txt">Delicious Boxes</h1>
                     <p>Little Fork Collective source our healthy ingredients from local sustainable suppliers across Victoria, 
                         using only the finest locally sourced ingredients.</p>
                 </div>
@@ -78,42 +84,68 @@
                 <div class="grid-two-two">
                     <div>
                         <img src="/images/menu-three.png" />
-                        <div class="bg label">Fresh Berries</div>
+                        <div class="bg label">Lasagna</div>
                     </div>
                     <div>
                         <img src="/images/menu-three.png" />
-                        <div class="bg label">Aged Cheddar</div>
+                        <div class="bg label">Chicken Meat Balls</div>
                     </div>
                     <div>
                         <img src="/images/menu-three.png" />
-                        <div class="bg label">Salami</div>
+                        <div class="bg label">Grazing Box</div>
                     </div>
                     <div>
                         <img src="/images/menu-three.png" />
-                        <div class="bg label">Apricots</div>
+                        <div class="bg label">Raspberry Square</div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="page-four centered-x">
-                <div class="page-four-title">
-                    <img src="/images/pageThreeTitle.svg">
+                <div class="page-four-title centered-x">
+                    <img style="position: absolute; width: 90%;" src="/images/pageTwoTitle.svg">
                     <h1>How It Works</h1>
                 </div>
-                <div class="centered-x">
-                    <img src="/images/methods-one.svg">
-                    <img src="/images/methods-two.svg">
-                    <img src="/images/methods-three.svg">
-                    <img src="/images/methods-four.svg">
+                <div class="centered-x methods methods-1">
+                    <div class="mobile mobile-1">
+                        <div>
+                            <img class="method-imgs" src="/images/methods-one.svg" />
+                            <img class="mobile-display" src="images/methods-mobile-one.svg" />
+                        </div>
+                        <img class="mobile-display right" onclick="nextMethod(1)" src="images/back.svg"/>
+                    </div>
+                    <div class="mobile mobile-2">
+                        <img class="mobile-display left" onclick="nextMethod(-1)" src="images/back.svg" />
+                        <div>
+                            <img class="method-imgs" src="/images/methods-two.svg" />
+                            <img class="mobile-display" src="images/methods-mobile-two.svg" />
+                        </div>
+                        <img class="mobile-display right" onclick="nextMethod(1)" src="images/back.svg" />
+                    </div>
+                    <div class="mobile mobile-3">
+                        <img class="mobile-display left" onclick="nextMethod(-1)" src="images/back.svg" />
+                        <div>
+                            <img class="method-imgs" src="/images/methods-three.svg" />
+                            <img class="mobile-display" src="images/methods-mobile-three.svg" />
+                        </div>
+                        <img class="mobile-display right" onclick="nextMethod(1)" src="images/back.svg" />
+                    </div>
+                    <div class="mobile mobile-4">
+                        <img class="mobile-display left" onclick="nextMethod(-1)" src="images/back.svg" />
+                        <div>
+                            <img class="method-imgs" src="/images/methods-four.svg" />
+                            <img class="mobile-display" src="images/methods-mobile-four.svg" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <section class="container">
             <div class="page-five">
+                <h1 class="centered-x">About Us</h1>
                 <div>
                     <div>
-                        <h1>About Us</h1>
                         <h2>What's New!</h2>
                         <p>We have just built a new website! </p>
                     </div>
