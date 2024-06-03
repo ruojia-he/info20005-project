@@ -121,7 +121,7 @@
 /* homepage 4 */
 .page-four {
     width: 100vw;
-    height: 930px;
+    height: 860px;
     text-align: center;
 }
 
@@ -140,14 +140,10 @@
     flex-direction: row;
     min-width: 100%;
     padding: 0% 3%;
-    margin-top: 90px;
+    margin: 50px 0;
 }
 
-
-
 .page-four .centered-x img {
-    border-style: solid;
-    border-radius: 25px;
     margin: 0px 10px;
 }
 

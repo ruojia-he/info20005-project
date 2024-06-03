@@ -22,8 +22,8 @@
 
 .sidebar .sidebar-close {
     position: absolute;
-    top: 38px;
-    right: 38px;
+    top: 33px;
+    right: 33px;
     cursor: pointer;
 }
 
@@ -243,4 +243,10 @@
     color: black;
     margin: 0;
     width: 40px;
+}
+
+.btn.leftright > img {
+    
+    margin: 0 auto;
+    width: 20px;
 }
