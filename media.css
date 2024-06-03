@@ -85,6 +85,15 @@
     display: none;
 }
 
+.hamburger-contacts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    align-items: center;
+}
+
+
+
 @media (max-width: 391px) {
     /* navbar */
     .navbar .main-menu {
