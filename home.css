@@ -88,18 +88,18 @@
 
 .page-three h1 {
     font-size: 80px;
-    margin-top: 10px;
 }
 
 .page-three p {
     text-align: left;
-    width: 65%;
-    margin: 40px 90px;
+    width: 100%;
+    margin: 0px 15px;
     font-weight: thin;
 }
 
 .page-three .centered-x img {
     position: absolute;
+    width: 31%;
 }
 
 .page-three .grid-two-two {
@@ -113,8 +113,7 @@
 
 .page-three button {
     font-size: 36px;
-    padding: 25px 100px;
-    margin-left: 20px;
+    padding: 25px 120px;
     color: white;
     background-color: #5FD0DF;
 }
@@ -181,7 +180,7 @@
 }
 
 .page-five h1 {
-    margin-right: 370px;
+    margin-right: 330px;
     margin-top: 500px;
 }
 
