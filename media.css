@@ -135,7 +135,7 @@
 
     /* homepage-one */
     .homepage .page-one {
-        background: url('/images/home-one-mobile.png') no-repeat;
+        background: url('images/home-one-mobile.png') no-repeat;
     }
 
     .homepage .page-one div {
@@ -326,7 +326,7 @@
     /* homepage 5 */
     .homepage .container .page-five {
         height: 591px;
-        background: url('/images/home-five-mobile.png') no-repeat;
+        background: url('images/home-five-mobile.png') no-repeat;
         padding: 0;
     }
 

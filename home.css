@@ -17,7 +17,7 @@
     width: 100vw;
     height: 930px;
     padding: 5% 10%;
-    background: url('/images/home.png') no-repeat;
+    background: url('images/home.png') no-repeat;
     background-position: center top;
     background-size: cover;
 }
@@ -35,7 +35,7 @@
     width: 100vw;
     height: 930px;
     padding: 3% 6%;
-    background: url('/images/home-two.png') no-repeat;
+    background: url('images/home-two.png') no-repeat;
     background-position: center top;
     background-size: cover;
     text-align: center;
@@ -162,7 +162,7 @@
     width: 100vw;
     height: 930px;
     padding: 5% 10%;
-    background: url('/images/home-five.png') no-repeat;
+    background: url('images/home-five.png') no-repeat;
     background-position: center top;
     background-size: cover;
 }
